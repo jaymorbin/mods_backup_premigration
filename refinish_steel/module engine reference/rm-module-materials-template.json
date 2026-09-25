@@ -1,0 +1,367 @@
+{
+    "_README": [
+        "==========================================",
+        "RM MODULE MATERIALS TEMPLATE",
+        "==========================================",
+        "This file defines the MATERIALS your module injects. Its companion",
+        "is rm-module-reactions-template.json, which defines what makes them.",
+        "",
+        "HOW TO USE THIS FILE:",
+        "  1. Copy it into your mod's data/ folder.",
+        "  2. Rename it to <yourmod>_materials.json.",
+        "  3. Change the module block below to your own prefix, name, version.",
+        "  4. Replace the materials array with your own content.",
+        "",
+        "THE UNDERSCORE CONVENTION:",
+        "  Any key starting with an underscore is documentation. RM's engine",
+        "  reads only the keys it knows about, so _README and _comment are",
+        "  ignored at load time. Keep them, edit them, or delete them.",
+        "  They cost nothing either way.",
+        "",
+        "NULL MEANS INHERIT:",
+        "  Every optional field accepts null. Null does not mean zero. It means",
+        "  'do not write this field', so the value from RM's clone donor stays.",
+        "  Writing a real number is always more predictable than leaving null,",
+        "  because the donor is chosen at runtime and can differ between worlds.",
+        "  The one exception is value, which some modules compute in Lua.",
+        "  See the guide's Runtime Resolution section.",
+        "",
+        "PREFIXING:",
+        "  You write key. RM writes module.prefix .. key to build the real",
+        "  material ID. Key GOLDBRONZE under prefix MYMOD_ becomes the",
+        "  inorganic MYMOD_GOLDBRONZE. Always use that full prefixed form",
+        "  when one material references another, and in your reactions file.",
+        "",
+        "FULL FIELD DOCUMENTATION:",
+        "  RM_Module_Modder_Guide.md, section 4."
+    ],
+
+    "module": {
+        "_comment": "Identity block. Must be byte-identical to the one in your reactions file. Both files are checked against each other.",
+
+        "prefix": "RM_TEMPLATE_",
+        "name": "RM Module Template",
+        "version": "1.0",
+
+        "_comment_depends_on": "Optional. Prefixes of modules whose materials you name by mat_id. RM injects those first. Omit the key entirely if you have none. Never list your own prefix.",
+        "depends_on": []
+    },
+
+    "materials": [
+
+        {
+            "_comment": "REFERENCE ENTRY. Every field the schema accepts, spelled out with its default noted. Nothing below this entry repeats it. Copy this one when you want to see the whole surface, then delete the lines you do not need.",
+
+            "key": "REFERENCE_METAL",
+            "name": "reference metal",
+
+            "_comment_class": "Required. METAL, STONE, CERAMIC, GEM, GLASS, or RAW. This picks the flag preset AND the clone donor. Guide section 4.1.",
+            "material_class": "METAL",
+
+            "_comment_names": "Optional. Per-state display names. Omit and RM derives them: solid/powder/paste/pressed take name, liquid becomes 'molten <name>', gas becomes 'boiling <name>'.",
+            "names": {
+                "solid": "reference metal",
+                "liquid": "molten reference metal",
+                "gas": "boiling reference metal",
+                "powder": "reference metal",
+                "paste": "reference metal",
+                "pressed": "reference metal"
+            },
+
+            "_comment_block_name": "Optional. What blocks of this material are called, as [singular, plural]. Ceramics usually want brick/bricks. Null keeps DF's default block naming.",
+            "block_name": null,
+
+            "_comment_color": "Optional but strongly recommended. A descriptor name from descriptor_color_standard.txt. This drives the colour WORD, as in 'a reference metal-colored bar'.",
+            "color": "SILVER",
+
+            "_comment_fallback_colors": "Optional. Tried in order if color is not loaded in this world. Without a fallback a missing colour silently renders the material grey with no error anywhere.",
+            "fallback_colors": ["LIGHT_GRAY", "GRAY"],
+
+            "_comment_state_colors": "Optional. Override the colour word for the molten and boiling states only. Both default to the solid colour.",
+            "liquid_color": null,
+            "gas_color": null,
+
+            "_comment_ansi": "Optional. The on-screen colour, as an ANSI triple [foreground, background, brightness], each 0 to 7. This is a DIFFERENT number space from color above and the two must not be confused. display_color is the item glyph, build_color is the built construction. Omit both and RM uses [7, 0, 0], the vanilla template default. build_color defaults to display_color.",
+            "display_color": [7, 0, 1],
+            "build_color": [7, 0, 1],
+
+            "_comment_tile": "Optional. Character code the material renders as. Vanilla metals and stones use 219 (a solid block). Powders and soils typically use 34. Null keeps the donor's glyph.",
+            "tile": 219,
+
+            "_comment_value": "Optional. Base material value in dwarfbucks. Null leaves the donor's value in place, which is rarely what you want. Set a number, or use the Lua-side value calculator described in the guide.",
+            "value": 30,
+
+            "_comment_density": "Optional. solid_density and liquid_density are kg/m3. molar_mass matters only for gases.",
+            "solid_density": 7850,
+            "liquid_density": 6980,
+            "molar_mass": null,
+
+            "_comment_heat": "Optional block, every field independently optional. Temperatures are in urists: Fahrenheit offset by 9968. 10000 is FREEZING (vanilla water melts there), 10036 is room temperature, water boils at 10180, magma sits at 12000. A material needs a melting_point above 12000 to survive a magma forge. Vanilla iron melts at 12718. Null on any field keeps the donor's value.",
+            "heat": {
+                "spec_heat": 450,
+                "melting_point": 12718,
+                "boiling_point": 14877,
+                "ignite_point": null,
+                "heatdam_point": null,
+                "colddam_point": null,
+                "mat_fixed_temp": null
+            },
+
+            "_comment_strength": "Optional. yield is where the material deforms, fracture is where it breaks, strain_at_yield is stiffness. All six stress types are independent and all are optional. max_edge is how sharp an edge the material takes: 0 for anything that takes none, and vanilla metals cluster around 10000. Position yours against the vanilla raws for the metal you want it to sit next to, and keep one scale across your whole module. absorption matters for porous materials such as clay and ceramic; leave it out for metals and stones.",
+            "strength": {
+                "yield": {
+                    "IMPACT": 542500,
+                    "COMPRESSIVE": 542500,
+                    "TENSILE": 172500,
+                    "TORSION": 172500,
+                    "SHEAR": 240000,
+                    "BENDING": 172500
+                },
+                "fracture": {
+                    "IMPACT": 1080000,
+                    "COMPRESSIVE": 1080000,
+                    "TENSILE": 310000,
+                    "TORSION": 310000,
+                    "SHEAR": 430000,
+                    "BENDING": 310000
+                },
+                "strain_at_yield": {
+                    "IMPACT": 319,
+                    "COMPRESSIVE": 319,
+                    "TENSILE": 319,
+                    "TORSION": 319,
+                    "SHEAR": 319,
+                    "BENDING": 319
+                },
+                "max_edge": 10000,
+                "absorption": null
+            },
+
+            "_comment_gem_names": "Optional for most classes, REQUIRED for material_class GEM. Format is [singular, plural]. Validation rejects a GEM material without it.",
+            "gem_names": null,
+
+            "_comment_reaction_classes": "Optional. Tags other reactions can filter on. This is the ONLY supported way for two modules to interact: your reaction filters on a class name, not on another module's material ID. An empty array is meaningful and worth writing, because it explicitly clears anything inherited from the clone donor.",
+            "reaction_classes": ["REFINISH_METAL_BEARING"],
+
+            "_comment_reaction_products": "Optional. Named derivation links: 'when a reaction asks me for product X, hand it material Y.' The id is the product code a reagent matches with has_material_reaction_product, or a product resolves with get_material_product. mat_id must be a FULL prefixed ID. This is how vanilla turns any clay into the right fired ceramic. Cross-module references are resolved in a final pass, so they work in either direction.",
+            "reaction_products": [],
+
+            "_comment_flags": "Optional escape hatches, applied LAST so they beat the class preset. material_flags takes material.flags names such as ITEMS_WEAPON or NO_STONE_STOCKPILE. inorganic_flags takes inorganic_raw.flags names such as SOIL_SAND or LAVA. Empty objects mean 'preset only, no overrides', which is the normal case.",
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+
+        {
+            "_comment": "METAL, minimal form. Produces bars. Gets the full weapon, armour, ammo, digger, anvil and furniture capability set. This is what most alloy modules write: identity, colour, value, density, heat, strength, and nothing else.",
+
+            "key": "DEMO_BRONZE",
+            "name": "demo bronze",
+            "material_class": "METAL",
+            "color": "BRONZE",
+            "fallback_colors": ["DARK_GOLD", "AMBER", "BROWN"],
+            "value": 12,
+            "solid_density": 8250,
+            "liquid_density": 7400,
+            "heat": {
+                "spec_heat": 385,
+                "melting_point": 11500,
+                "boiling_point": 14100
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 344000,
+                    "COMPRESSIVE": 344000,
+                    "TENSILE": 100000,
+                    "TORSION": 100000,
+                    "SHEAR": 137000,
+                    "BENDING": 100000
+                },
+                "fracture": {
+                    "IMPACT": 602000,
+                    "COMPRESSIVE": 602000,
+                    "TENSILE": 175000,
+                    "TORSION": 175000,
+                    "SHEAR": 240000,
+                    "BENDING": 175000
+                },
+                "max_edge": 10000
+            },
+            "reaction_classes": [],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+
+        {
+            "_comment": "STONE. Produces boulders. Buildable, makes furniture, works as a quern stone. Note the reaction_classes here: they are the supply chain tags other modules filter on. Prefer descriptive process names over material names, so unrelated mods can hook the same chain.",
+
+            "key": "DEMO_SLAG",
+            "name": "demo slag",
+            "material_class": "STONE",
+            "color": "DARK_GRAY",
+            "fallback_colors": ["GRAY", "BLACK"],
+            "value": 1,
+            "solid_density": 2900,
+            "liquid_density": 2600,
+            "heat": {
+                "spec_heat": 800,
+                "melting_point": 12200
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 100000,
+                    "COMPRESSIVE": 150000,
+                    "TENSILE": 15000,
+                    "TORSION": 15000,
+                    "SHEAR": 15000,
+                    "BENDING": 15000
+                },
+                "fracture": {
+                    "IMPACT": 100000,
+                    "COMPRESSIVE": 150000,
+                    "TENSILE": 15000,
+                    "TORSION": 15000,
+                    "SHEAR": 15000,
+                    "BENDING": 15000
+                },
+                "max_edge": 0
+            },
+            "reaction_classes": ["THERMALLY_PROCESSED", "BYPRODUCT"],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+
+        {
+            "_comment": "CERAMIC with a reaction_products link. The link is what lets a firing reaction say 'take whatever raw material is in the clay slot and give me ITS fired form', instead of hardcoding one output. Vanilla uses exactly this pattern with FIRED_MAT. Note that mat_id carries the FULL prefix.",
+
+            "key": "DEMO_CLAY",
+            "name": "demo clay",
+            "material_class": "STONE",
+            "color": "BROWN",
+            "fallback_colors": ["DARK_BROWN", "TAUPE_DARK"],
+            "value": 1,
+            "solid_density": 1600,
+            "heat": {
+                "spec_heat": 880,
+                "melting_point": 11500
+            },
+            "reaction_classes": ["RAW"],
+            "reaction_products": [
+                {
+                    "_comment": "id is the product code. mat_id is the full prefixed material it resolves to.",
+                    "id": "FIRED_MAT",
+                    "mat_id": "RM_TEMPLATE_DEMO_STONEWARE"
+                }
+            ],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+
+        {
+            "_comment": "CERAMIC, the fired output of DEMO_CLAY above. block_name renames its blocks to bricks. absorption is set because ceramics are porous; the neutral reset zeroes it, so a ceramic that needs it must ask.",
+
+            "key": "DEMO_STONEWARE",
+            "name": "demo stoneware",
+            "material_class": "CERAMIC",
+            "block_name": ["brick", "bricks"],
+            "color": "TAUPE_DARK",
+            "fallback_colors": ["BROWN", "DARK_BROWN"],
+            "value": 3,
+            "solid_density": 2300,
+            "heat": {
+                "spec_heat": 850,
+                "melting_point": 13000
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 200000,
+                    "COMPRESSIVE": 250000,
+                    "TENSILE": 20000,
+                    "TORSION": 20000,
+                    "SHEAR": 20000,
+                    "BENDING": 20000
+                },
+                "fracture": {
+                    "IMPACT": 200000,
+                    "COMPRESSIVE": 250000,
+                    "TENSILE": 20000,
+                    "TORSION": 20000,
+                    "SHEAR": 20000,
+                    "BENDING": 20000
+                },
+                "max_edge": 200,
+                "absorption": 200
+            },
+            "reaction_classes": ["THERMALLY_PROCESSED"],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+
+        {
+            "_comment": "GEM. gem_names is REQUIRED here and validation fails without it. Format is [singular, plural]. Gems produce ROUGH items and are cut at a jeweler's workshop.",
+
+            "key": "DEMO_GEM",
+            "name": "demo beryl",
+            "material_class": "GEM",
+            "color": "APPLE_GREEN",
+            "fallback_colors": ["GREEN", "EMERALD"],
+            "value": 20,
+            "solid_density": 2700,
+            "gem_names": ["demo beryl", "demo beryls"],
+            "heat": {
+                "spec_heat": 830,
+                "melting_point": 12500
+            },
+            "reaction_classes": [],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+
+        {
+            "_comment": "POWDER-oriented STONE. Nothing in the schema declares a material 'a powder': a material becomes powder because a reaction outputs it as POWDER_MISC. What this entry shows is the cosmetic side, tile 34 so loose piles read as dust rather than as solid blocks.",
+
+            "key": "DEMO_POWDER",
+            "name": "demo lime powder",
+            "material_class": "STONE",
+            "color": "WHITE",
+            "fallback_colors": ["LIGHT_GRAY", "IVORY"],
+            "tile": 34,
+            "value": 2,
+            "solid_density": 1200,
+            "heat": {
+                "spec_heat": 900,
+                "melting_point": 12800
+            },
+            "reaction_classes": ["MECHANICALLY_PROCESSED"],
+            "reaction_products": [],
+            "material_flags": {
+                "_comment": "NO_STONE_STOCKPILE keeps a powder material out of the stone stockpile menu, where it would otherwise clutter the list.",
+                "NO_STONE_STOCKPILE": true
+            },
+            "inorganic_flags": {}
+        },
+
+        {
+            "_comment": "RAW class. No flags are cleared and none are set, so the clone donor's flags survive untouched and material_flags is your only control. Use this when you know exactly what you want and the presets get in the way. If you are not sure, you want one of the named classes instead.",
+
+            "key": "DEMO_RAW",
+            "name": "demo raw material",
+            "material_class": "RAW",
+            "color": "GRAY",
+            "fallback_colors": ["LIGHT_GRAY"],
+            "value": 1,
+            "solid_density": 2500,
+            "reaction_classes": [],
+            "reaction_products": [],
+            "material_flags": {
+                "IS_STONE": true,
+                "ITEMS_HARD": true,
+                "ITEMS_QUERN": false
+            },
+            "inorganic_flags": {}
+        }
+    ]
+}

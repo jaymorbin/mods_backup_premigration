@@ -1,0 +1,67 @@
+[ID:refinish_steel]
+[NUMERIC_VERSION:15]
+[DISPLAYED_VERSION:3.3.6]
+[EARLIEST_COMPATIBLE_NUMERIC_VERSION:4]
+[EARLIEST_COMPATIBLE_DISPLAYED_VERSION:3.0.0]
+[AUTHOR:grungeisdead]
+[NAME:Refinish Metal]
+[DESCRIPTION:Refinish metal bars using processed minerals, metals and precious stones.]
+[STEAM_TITLE:Refinish Metal]
+
+[STEAM_TAG:mod]
+[STEAM_TAG:metal]
+[STEAM_TAG:metals]
+[STEAM_TAG:material]
+[STEAM_TAG:inorganic]
+[STEAM_TAG:graphics]
+[STEAM_TAG:color]
+[STEAM_TAG:crafting]
+[STEAM_TAG:item]
+[STEAM_TAG:metallurgy]
+[STEAM_TAG:steel]
+[STEAM_TAG:customization]
+[STEAM_TAG:colors]
+[STEAM_TAG:smelting]
+[STEAM_TAG:rawless]
+[STEAM_TAG:utility]
+[STEAM_TAG:forge]
+[STEAM_TAG:jeweler]
+[STEAM_TAG:gem]
+[STEAM_TAG:stone]
+[STEAM_TAG:powder]
+[STEAM_TAG:dust]
+[STEAM_TAG:entity]
+[STEAM_TAG:ui]
+[STEAM_TAG:reaction]
+[STEAM_TAG:building]
+[STEAM_TAG:rawless]
+[STEAM_TAG:grind]
+[STEAM_TAG:utility]
+[STEAM_TAG:qol]
+[STEAM_TAG:compatibility]
+
+[STEAM_DESCRIPTION:
+===================================================
+CHANGELOG v3.4: MAKING FUEL UPDATE
+===================================================
+
+==============
+RM CORE
+==============
+- Users no longer need to unpause to start RM, which now boots, builds and loads assets immediately upon loading the world.
+- Fixed design flaw which produced name duplication conflicts via vanilla reaction generation at workshops like the forge.
+- As a consequence, colour finishes no longer conserve finishing dust value, nor do specific finishes which can be arrived at through multiple reagents. Only unique material finishes now inherit value from dust.
+- Log system updates: Searchable log, colour coding/tag system with headers and bodies, configurable ui log verbosity.
+- Telemetry update: Lag profiler quantifies and reports telemetrics of active script process loads to status panel
+
+==============
+MODULE ENGINE
+==============
+- Sprites for many vanilla and custom objects can now be both injected and tinted live.
+- Building, graphics, and plant injections are now supported.
+- Modules can now push config pages to RM hud
+
+
+]
+
+[STEAM_FILE_ID:3678145528]

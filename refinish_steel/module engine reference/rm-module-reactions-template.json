@@ -1,0 +1,534 @@
+{
+    "_README": [
+        "==========================================",
+        "RM MODULE REACTIONS TEMPLATE",
+        "==========================================",
+        "This file defines the REACTIONS your module injects, and the menu",
+        "CATEGORIES they are filed under. Its companion is",
+        "rm-module-materials-template.json.",
+        "",
+        "HOW TO USE THIS FILE:",
+        "  1. Copy it into your mod's data/ folder.",
+        "  2. Rename it to <yourmod>_reactions.json.",
+        "  3. Copy the module block from your materials file, byte for byte.",
+        "  4. Replace the reactions and categories arrays with your own.",
+        "",
+        "THE UNDERSCORE CONVENTION:",
+        "  Any key starting with an underscore is documentation. RM's engine",
+        "  reads only the keys it knows about, so _README and _comment are",
+        "  ignored at load time. Keep them or delete them.",
+        "",
+        "THE SHAPE OF A REACTION:",
+        "  reagents are what the job consumes. products are what it makes.",
+        "  building is where it appears. skill is who gets better at it.",
+        "  permissions decide which civilizations know how to do it.",
+        "",
+        "REAGENT CODES ARE LOCAL:",
+        "  A reagent's code is a private label inside ONE reaction. It is how",
+        "  products and container links point back at a slot. It never leaves",
+        "  the reaction and never needs a prefix. Lowercase by convention.",
+        "  Two reagents in the same reaction may not share a code.",
+        "",
+        "MATERIAL IDS ARE GLOBAL:",
+        "  Anywhere you write mat_id or metal_id you are naming a real loaded",
+        "  inorganic. Vanilla materials use their bare ID (IRON, GYPSUM).",
+        "  Module materials use the FULL prefixed ID (MYMOD_GOLDBRONZE).",
+        "",
+        "FULL FIELD DOCUMENTATION:",
+        "  RM_Module_Modder_Guide.md, sections 5 and 6.",
+        "  Every reagent type, product type, building and skill name is listed",
+        "  in refinish-module-types.lua, which is the authoritative source."
+    ],
+
+    "module": {
+        "_comment": "Must be byte-identical to the module block in your materials file. RM cross-checks the two and rejects the module on a mismatch.",
+
+        "prefix": "RM_TEMPLATE_",
+        "name": "RM Module Template",
+        "version": "1.0",
+        "depends_on": []
+    },
+
+    "_comment_categories": "Categories are the collapsible headings in a workshop's job list. Optional: omit the array entirely and every reaction sits loose at the top level. RM builds each real ID as prefix + CAT_ + key, so key CEMENT under prefix MYMOD_ becomes MYMOD_CAT_CEMENT. That full form is what a reaction's category field must contain.",
+
+    "categories": [
+        {
+            "_comment": "Top-level category. parent is required and an empty string means top level.",
+            "key": "SMELTING",
+            "name": "Demo smelting",
+            "parent": "",
+            "_comment_description": "Optional blurb shown under the heading in the job menu.",
+            "description": "Alloys and ores added by the template module.",
+            "_comment_hotkey": "Optional. An interface_key name such as CUSTOM_S. An unrecognised name warns at injection and is ignored rather than failing the module.",
+            "hotkey": null
+        },
+        {
+            "_comment": "Child category. parent names the PARENT'S key, unprefixed. RM adds the prefix when it builds the tree. Naming a category this module does not declare leaves the string alone, which lets you nest under a category that already exists.",
+            "key": "SMELTING_ALLOYS",
+            "name": "Alloys",
+            "parent": "SMELTING",
+            "description": null,
+            "hotkey": null
+        },
+        {
+            "key": "PROCESSING",
+            "name": "Demo processing",
+            "parent": "",
+            "description": "Grinding, firing, and shaping.",
+            "hotkey": null
+        }
+    ],
+
+    "reactions": [
+
+        {
+            "_comment": "REFERENCE ENTRY. Every reaction-level field the schema accepts, with defaults noted. Nothing below this entry repeats it.",
+
+            "_comment_key": "Required. Combined with the prefix to build the reaction ID. Must be unique inside this file.",
+            "key": "REFERENCE_REACTION",
+
+            "_comment_name": "Required. What the player reads in the job list. Lowercase, verb first, the way vanilla phrases it.",
+            "name": "make reference alloy",
+
+            "_comment_building": "Required. Where the job appears. SMELTER, KILN, GLASS_FURNACE, FORGE, MASON, CRAFTSMAN, JEWELER, MILL, ASHERY, a custom workshop code, or NONE. Furnace and mill entries cover their magma and millstone variants automatically.",
+            "building": "SMELTER",
+
+            "_comment_skill": "Optional. Which skill the worker trains and is chosen by. Omit and the reaction inherits the skill of whichever template RM cloned, which is unpredictable. Always set it.",
+            "skill": "SMELT",
+
+            "_comment_fuel": "Optional, default false. True means the job burns one unit of fuel, and a magma building exempts it exactly as in vanilla. Only meaningful at furnace-class buildings.",
+            "fuel": true,
+
+            "_comment_category": "Optional. The FULL prefixed category ID, not the bare key you wrote in the categories array above. Omit or null to leave the reaction at the top level.",
+            "category": "RM_TEMPLATE_CAT_SMELTING_ALLOYS",
+
+            "_comment_fallback_template": "Optional. RM builds a reaction by cloning a live one for its C++ structure, then zeroing every semantic field and rebuilding from this definition. It scores the loaded reactions to pick a donor. Name a specific vanilla reaction code here to override that choice. You almost never need this; it exists for cosmetic tidiness at unusual buildings.",
+            "fallback_template": null,
+
+            "_comment_permissions": "Optional, defaults to AUTO. Decides which civilizations receive the reaction. AUTO evaluates every civ and grants it to any that can already work the reagent metals and operate the building. ENTITY_CODE grants only to the entity_raw codes you name, and still applies the same knowledge gate. NONE grants to nobody, which combined with fortress_mode below means the player alone can do it.",
+            "permissions": {
+                "mode": "AUTO"
+            },
+
+            "_comment_reaction_flags": "Optional. fortress_mode true lets the player's own civilization run the reaction WITHOUT an explicit permit, bypassing the permission system. It is a bypass, not a restriction. Default is false, meaning the player needs a permit like anyone else.",
+            "reaction_flags": {
+                "fortress_mode": false
+            },
+
+            "_comment_reagents": "Required, at least one. Each entry is one input slot.",
+            "reagents": [
+                {
+                    "_comment": "REFERENCE REAGENT. Every field, with defaults noted.",
+
+                    "_comment_code": "Required. Local label for this slot. Lowercase, unique within this reaction.",
+                    "code": "main_metal",
+
+                    "_comment_type": "Required. Names an entry in REAGENT_TYPES, which fixes the item type and material class. BAR, BAR, COAL, BOULDER, BOULDER_ANY, FLUX, ORE_OF, POWDER, BAG, BUCKET, BARREL, WATER, ROUGH, BLOCKS, ROCK, JUG and more. Guide section 5.2 has the full list with what each one matches.",
+                    "type": "BAR",
+
+                    "_comment_quantity": "Required. How many units this slot consumes. Bars and boulders count as whole items. Powders and liquids count in dimension units, where 150 is one full bag or bucket.",
+                    "quantity": 1,
+
+                    "_comment_mat_id": "Required by the types that need a specific material (BAR, BOULDER, BLOCKS, ROUGH, LIQUID_INORGANIC). Optional on POWDER, where omitting it makes the slot accept any powder. Meaningless on the wildcard types, which ignore it.",
+                    "mat_id": "COPPER",
+
+                    "_comment_metal_id": "Required by ORE_OF and used by nothing else. Names the METAL, not the ore, and DF then matches any boulder that smelts to it.",
+                    "metal_id": null,
+
+                    "_comment_reaction_class": "Optional. Narrows the slot to materials carrying this reaction_class tag. This is how you accept another module's materials without naming them: they opt in by carrying the tag. Overrides the type's own default class if it has one.",
+                    "reaction_class": null,
+
+                    "_comment_has_material_reaction_product": "Optional. Narrows the slot to materials that declare a reaction_product with this id. The vanilla clay pattern: match anything that knows how to be fired, then let the product ask that same material what it fires into.",
+                    "has_material_reaction_product": null,
+
+                    "_comment_sand_bearing": "Optional. Note this sits at the ROOT of the reagent, NOT inside flags. True narrows the slot to materials with the SOIL_SAND flag. It is the correct filter for sand, because vanilla collected sandbags are a furniture item type and not a powder in a bag.",
+                    "sand_bearing": null,
+
+                    "_comment_contains": "Optional. Names another reagent's code and means 'that reagent is inside this one'. Put it on the CONTAINER, pointing at the contents. The contents slot gets flags.in_container true. See the FIRE_DEMO_CLINKER example below.",
+                    "contains": null,
+
+                    "_comment_flags": "Optional. Every flag defaults to false and RM zeroes the whole set before applying yours, so nothing leaks in from the cloned template. Only list the ones you want on.",
+                    "flags": {
+                        "_comment_container": "preserve keeps the item instead of consuming it, which is what an empty bag or bucket wants. in_container means this slot's item must be inside another reagent. empty requires the container to be holding nothing.",
+                        "preserve": false,
+                        "in_container": false,
+                        "empty": false,
+
+                        "_comment_material": "non_economic accepts stones the player has not flagged as economic. building_material accepts construction materials. fire_safe and magma_safe filter by melting point. glass_material requires the item be made of glass. allow_melt_dump accepts items marked for melting.",
+                        "non_economic": false,
+                        "building_material": false,
+                        "fire_safe": false,
+                        "magma_safe": false,
+                        "glass_material": false,
+                        "allow_melt_dump": false,
+
+                        "_comment_quality": "unrotten rejects rotten organics. unimproved rejects items already decorated, which stops a glazed pot being glazed twice. any_raw_material accepts unworked stock.",
+                        "unrotten": false,
+                        "unimproved": false,
+                        "any_raw_material": false,
+
+                        "_comment_creature": "The creature-material filters, used with reagent type BODY_PART. That type is item_type -1, so these flags do ALL the filtering. Dropping any one of them turns the slot into a wildcard that matches every item in the fortress.",
+                        "body_part": false,
+                        "bone": false,
+                        "shell": false,
+                        "horn": false,
+
+                        "_comment_amount": "does_not_determine_product_amount stops this slot from scaling the output count. Useful when a catalyst or container should not multiply the job.",
+                        "does_not_determine_product_amount": false
+                    }
+                }
+            ],
+
+            "_comment_products": "Required, at least one. Each entry is one output.",
+            "products": [
+                {
+                    "_comment": "REFERENCE PRODUCT. Every field, with defaults noted.",
+
+                    "_comment_type": "Required. BAR, BAR_COAL, BAR_POTASH, BAR_ASH, BAR_PEARLASH, BLOCKS, BOULDER, ROUGH, POWDER_MISC, LIQUID_MISC, LIQUID_MISC_INORGANIC, ROCK, CRAFTS, IMPROVEMENT, or any plain df.item_type name such as TABLE or WINDOW.",
+                    "type": "BAR",
+
+                    "_comment_material": "Exactly ONE of mat_id, get_material_same, or get_material_product. Not zero, not two. mat_id names the output material directly. get_material_same names a reagent code and copies that item's material. get_material_product names a reagent code plus a product code and asks that reagent's material what it derives into.",
+                    "mat_id": "RM_TEMPLATE_DEMO_BRONZE",
+                    "get_material_same": null,
+                    "get_material_product": null,
+
+                    "_comment_count": "Optional, default 1. How many items are produced.",
+                    "count": 1,
+
+                    "_comment_dimension": "Optional, default 150. Size of each item for dimensioned types. 150 is one bar or one full bag of powder. Boulders conventionally use 600.",
+                    "dimension": 150,
+
+                    "_comment_probability": "Optional, default 100. Percent chance this product appears. Use it for byproducts.",
+                    "probability": 100,
+
+                    "_comment_to_container": "Optional. Names a reagent code, and puts the output inside that item. Pair it with a BAG or BUCKET reagent carrying flags.preserve true and flags.empty true.",
+                    "to_container": null,
+
+                    "_comment_subtype": "Optional. An itemdef code such as ITEM_TOOL_JUG, for product types that have subtypes. Resolved at build time because subtype indices shift with mod load order.",
+                    "subtype": null,
+
+                    "_comment_force_edge": "Optional, default false. Marks the output as an edged item. This is the knapping pattern.",
+                    "force_edge": false
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: simple alloy. Two bars in, one bar out, at a smelter. The shortest useful reaction there is. AUTO permissions means any civ that already smelts copper and tin will learn this on its own.",
+
+            "key": "MAKE_DEMO_BRONZE",
+            "name": "make demo bronze bars",
+            "building": "SMELTER",
+            "skill": "SMELT",
+            "fuel": true,
+            "category": "RM_TEMPLATE_CAT_SMELTING_ALLOYS",
+            "permissions": { "mode": "AUTO" },
+            "reagents": [
+                { "code": "copper", "type": "BAR", "mat_id": "COPPER", "quantity": 3 },
+                { "code": "tin",    "type": "BAR", "mat_id": "TIN",    "quantity": 1 }
+            ],
+            "products": [
+                {
+                    "type": "BAR",
+                    "mat_id": "RM_TEMPLATE_DEMO_BRONZE",
+                    "count": 4,
+                    "dimension": 150
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: smelting from ore. ORE_OF takes metal_id and DF then accepts any boulder whose ore table lists that metal, so this one reaction covers malachite, tetrahedrite and any modded copper ore without naming them. The FLUX reagent works the same way, matching on reaction_class rather than material.",
+
+            "key": "SMELT_DEMO_ORE",
+            "name": "smelt copper ore into demo bronze",
+            "building": "SMELTER",
+            "skill": "SMELT",
+            "fuel": true,
+            "category": "RM_TEMPLATE_CAT_SMELTING_ALLOYS",
+            "permissions": { "mode": "AUTO" },
+            "reagents": [
+                { "code": "ore",  "type": "ORE_OF", "metal_id": "COPPER", "quantity": 1 },
+                { "code": "tin",  "type": "BAR", "mat_id": "TIN", "quantity": 1 },
+                { "code": "flux", "type": "FLUX", "quantity": 1 }
+            ],
+            "products": [
+                {
+                    "type": "BAR",
+                    "mat_id": "RM_TEMPLATE_DEMO_BRONZE",
+                    "count": 4
+                },
+                {
+                    "_comment": "Byproduct. probability under 100 makes it occasional.",
+                    "type": "BOULDER",
+                    "mat_id": "RM_TEMPLATE_DEMO_SLAG",
+                    "count": 1,
+                    "dimension": 600,
+                    "probability": 50
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: grinding into a bag. The output goes INTO a container, so the bag is a reagent with preserve (do not consume it) and empty (it must be holding nothing), and the product names it with to_container. One bag holds one product, so two outputs need two bag reagents.",
+
+            "key": "GRIND_DEMO_POWDER",
+            "name": "grind limestone into demo lime powder",
+            "building": "MASON",
+            "skill": "MASONRY",
+            "fuel": false,
+            "category": "RM_TEMPLATE_CAT_PROCESSING",
+            "permissions": { "mode": "AUTO" },
+            "reagents": [
+                { "code": "limestone", "type": "FLUX", "quantity": 2 },
+                {
+                    "code": "powder_bag",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": { "preserve": true, "empty": true }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "RM_TEMPLATE_DEMO_POWDER",
+                    "count": 4,
+                    "dimension": 150,
+                    "to_container": "powder_bag"
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: consuming a bagged powder. The mirror image of the one above. The powder slot carries in_container, the bag slot carries preserve and contains pointing back at the powder. Read the pairing as: the bag CONTAINS the powder, the powder is IN a container. One slot must be satisfied by ONE bag; DF will not aggregate several bags into a single slot.",
+
+            "key": "FIRE_DEMO_CLINKER",
+            "name": "fire demo lime powder into demo stoneware",
+            "building": "KILN",
+            "skill": "POTTERY",
+            "fuel": true,
+            "category": "RM_TEMPLATE_CAT_PROCESSING",
+            "permissions": { "mode": "AUTO" },
+            "reagents": [
+                {
+                    "code": "powder",
+                    "type": "POWDER",
+                    "mat_id": "RM_TEMPLATE_DEMO_POWDER",
+                    "quantity": 150,
+                    "flags": { "in_container": true }
+                },
+                {
+                    "code": "powder_bag",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": { "preserve": true },
+                    "contains": "powder"
+                }
+            ],
+            "products": [
+                {
+                    "type": "BOULDER",
+                    "mat_id": "RM_TEMPLATE_DEMO_STONEWARE",
+                    "count": 1,
+                    "dimension": 600
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: derived output. The reagent does not name a material at all. It says 'any inorganic boulder that declares a FIRED_MAT product', and the product says 'whatever THAT material's FIRED_MAT is'. One reaction then fires every clay in the world, including clays from mods that did not know this reaction existed. This is the single most useful pattern in the schema.",
+
+            "key": "FIRE_ANY_CLAY",
+            "name": "fire clay into stoneware",
+            "building": "KILN",
+            "skill": "POTTERY",
+            "fuel": true,
+            "category": "RM_TEMPLATE_CAT_PROCESSING",
+            "permissions": { "mode": "AUTO" },
+            "reagents": [
+                {
+                    "code": "clay",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "has_material_reaction_product": "FIRED_MAT"
+                }
+            ],
+            "products": [
+                {
+                    "type": "BOULDER",
+                    "get_material_product": {
+                        "reagent_code": "clay",
+                        "product_code": "FIRED_MAT"
+                    },
+                    "count": 1,
+                    "dimension": 600
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: inherited output with an edge. get_material_same copies the reagent item's own material straight through, so the sharp rock is made of whatever rock was knapped. BOULDER_ANY plus non_economic is the standard 'any ordinary stone' slot, and it also gives the player the magnifying glass material selector.",
+
+            "key": "KNAP_DEMO_ROCK",
+            "name": "knap a sharp rock",
+            "building": "CRAFTSMAN",
+            "skill": "KNAPPING",
+            "fuel": false,
+            "category": "RM_TEMPLATE_CAT_PROCESSING",
+            "permissions": { "mode": "AUTO" },
+            "reagents": [
+                {
+                    "code": "stone",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": { "non_economic": true }
+                }
+            ],
+            "products": [
+                {
+                    "type": "ROCK",
+                    "get_material_same": "stone",
+                    "count": 2,
+                    "force_edge": true
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: liquids. A liquid always travels in a container, so it is always two reagents. The bucket carries preserve and contains; the water carries in_container. Quantity 150 is one full bucket. Use BUCKET or BARREL, never the CONTAINER type, which is item_type -1 and will happily grab a metal bar or a weapon as a container.",
+
+            "key": "SLAKE_DEMO_POWDER",
+            "name": "slake demo lime powder with water",
+            "building": "MASON",
+            "skill": "MASONRY",
+            "fuel": false,
+            "category": "RM_TEMPLATE_CAT_PROCESSING",
+            "permissions": { "mode": "AUTO" },
+            "reagents": [
+                { "code": "quicklime", "type": "BOULDER", "mat_id": "QUICKLIME", "quantity": 1 },
+                {
+                    "code": "water",
+                    "type": "WATER",
+                    "quantity": 150,
+                    "flags": { "in_container": true }
+                },
+                {
+                    "code": "bucket",
+                    "type": "BUCKET",
+                    "quantity": 1,
+                    "flags": { "preserve": true },
+                    "contains": "water"
+                },
+                {
+                    "code": "powder_bag",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": { "preserve": true, "empty": true }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "RM_TEMPLATE_DEMO_POWDER",
+                    "count": 4,
+                    "dimension": 150,
+                    "to_container": "powder_bag"
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: cross-module input by reaction_class. The slot names no material and no module. It accepts any boulder tagged THERMALLY_PROCESSED, whoever made it. Another mod opts in simply by putting that tag on its own material. This is the ONLY supported way for modules to feed each other. Naming another module's mat_id directly breaks the moment that module is not installed.",
+
+            "key": "REPROCESS_DEMO_SLAG",
+            "name": "reprocess slag into demo bronze",
+            "building": "SMELTER",
+            "skill": "SMELT",
+            "fuel": true,
+            "category": "RM_TEMPLATE_CAT_SMELTING",
+            "permissions": { "mode": "AUTO" },
+            "reagents": [
+                {
+                    "code": "slag",
+                    "type": "BOULDER_UNTYPED",
+                    "quantity": 3,
+                    "reaction_class": "THERMALLY_PROCESSED"
+                },
+                { "code": "flux", "type": "FLUX", "quantity": 1 }
+            ],
+            "products": [
+                {
+                    "type": "BAR",
+                    "mat_id": "RM_TEMPLATE_DEMO_BRONZE",
+                    "count": 1
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: restricted access. ENTITY_CODE names the civilizations by their entity_raw code, so only they trade or arrive with the results, and the reagent knowledge gate still applies on top. Codes are whatever is loaded, vanilla or modded: MOUNTAIN, PLAINS, FOREST, EVIL, SUBTERRANEAN.",
+
+            "key": "MAKE_DEMO_GEM",
+            "name": "grow a demo beryl",
+            "building": "KILN",
+            "skill": "POTTERY",
+            "fuel": true,
+            "category": "RM_TEMPLATE_CAT_PROCESSING",
+            "permissions": {
+                "mode": "ENTITY_CODE",
+                "entities": ["MOUNTAIN"]
+            },
+            "reagents": [
+                {
+                    "code": "powder",
+                    "type": "POWDER",
+                    "mat_id": "RM_TEMPLATE_DEMO_POWDER",
+                    "quantity": 150,
+                    "flags": { "in_container": true }
+                },
+                {
+                    "code": "powder_bag",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": { "preserve": true },
+                    "contains": "powder"
+                }
+            ],
+            "products": [
+                {
+                    "type": "ROUGH",
+                    "mat_id": "RM_TEMPLATE_DEMO_GEM",
+                    "count": 1
+                }
+            ]
+        },
+
+        {
+            "_comment": "PATTERN: player-only. permissions NONE grants the reaction to nobody, and fortress_mode true then lets the player's own civilization run it anyway without a permit. The result is a recipe the player can use and no other civilization has, so it never appears in caravan stock or on invaders.",
+
+            "key": "MAKE_DEMO_SECRET",
+            "name": "forge a demo bronze anvil",
+            "building": "FORGE",
+            "skill": "FORGE_FURNITURE",
+            "fuel": true,
+            "category": "RM_TEMPLATE_CAT_SMELTING",
+            "permissions": { "mode": "NONE" },
+            "reaction_flags": { "fortress_mode": true },
+            "reagents": [
+                {
+                    "code": "bars",
+                    "type": "BAR",
+                    "mat_id": "RM_TEMPLATE_DEMO_BRONZE",
+                    "quantity": 3
+                }
+            ],
+            "products": [
+                {
+                    "type": "ANVIL",
+                    "mat_id": "RM_TEMPLATE_DEMO_BRONZE",
+                    "count": 1
+                }
+            ]
+        }
+    ]
+}
