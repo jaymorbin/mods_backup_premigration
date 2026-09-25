@@ -1,0 +1,1945 @@
+{
+    "module": {
+        "prefix": "MAKING_CONCRETE_",
+        "name": "Making Concrete",
+        "version": "1.2.3"
+    },
+    "reactions": [
+        {
+            "key": "GRIND_FARIN",
+            "name": "grind flux and clay into farin",
+            "building": "MILL",
+            "skill": "MILLING",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CEMENT",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "flux_stone",
+                    "type": "FLUX",
+                    "quantity": 4
+                },
+                {
+                    "code": "clay",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "has_material_reaction_product": "FIRED_MAT"
+                },
+                {
+                    "code": "farin_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "farin_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "farin_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "farin_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_FARIN",
+                    "count": 10,
+                    "dimension": 150,
+                    "to_container": "farin_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_FARIN",
+                    "count": 10,
+                    "dimension": 150,
+                    "to_container": "farin_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_FARIN",
+                    "count": 10,
+                    "dimension": 150,
+                    "to_container": "farin_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_FARIN",
+                    "count": 10,
+                    "dimension": 150,
+                    "to_container": "farin_bag_4"
+                }
+            ]
+        },
+        {
+            "key": "FIRE_CLINKER",
+            "name": "fire farin into clinker",
+            "building": "KILN",
+            "skill": "POTTERY",
+            "fuel": true,
+            "category": "MAKING_CONCRETE_CAT_CEMENT",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "farin_1",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_FARIN",
+                    "quantity": 1500,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "farin_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "farin_1"
+                },
+                {
+                    "code": "farin_2",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_FARIN",
+                    "quantity": 1500,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "farin_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "farin_2"
+                },
+                {
+                    "code": "farin_3",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_FARIN",
+                    "quantity": 1500,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "farin_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "farin_3"
+                },
+                {
+                    "code": "farin_4",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_FARIN",
+                    "quantity": 1500,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "farin_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "farin_4"
+                },
+                {
+                    "code": "fuel_2",
+                    "type": "BAR_ANY",
+                    "quantity": 150,
+                    "reaction_class": "COKE"
+                },
+                {
+                    "code": "fuel_3",
+                    "type": "BAR_ANY",
+                    "quantity": 150,
+                    "reaction_class": "COKE"
+                }
+            ],
+            "products": [
+                {
+                    "type": "BOULDER",
+                    "mat_id": "MAKING_CONCRETE_CLINKER",
+                    "count": 3,
+                    "dimension": 150
+                }
+            ]
+        },
+        {
+            "key": "GRIND_CEMENT",
+            "name": "grind clinker into cement",
+            "building": "MILL",
+            "skill": "MILLING",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CEMENT",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "clinker",
+                    "type": "BOULDER",
+                    "mat_id": "MAKING_CONCRETE_CLINKER",
+                    "quantity": 3
+                },
+                {
+                    "code": "cement_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "cement_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "cement_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_CEMENT",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "cement_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_CEMENT",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "cement_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_CEMENT",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "cement_bag_3"
+                }
+            ]
+        },
+        {
+            "key": "GRIND_SAND",
+            "name": "grind any stone into sand",
+            "building": "MILL",
+            "skill": "MILLING",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CONCRETE",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "stone",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "sand_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_5",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_6",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_7",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_8",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_4"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_5"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_6"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_7"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_8"
+                }
+            ]
+        },
+        {
+            "key": "GRIND_COMMON_SAND",
+            "name": "grind common stone into sand",
+            "building": "MILL",
+            "skill": "MILLING",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CONCRETE",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "stone",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": true
+                    }
+                },
+                {
+                    "code": "sand_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_5",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_6",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_7",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_8",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_4"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_5"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_6"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_7"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_8"
+                }
+            ]
+        },
+        {
+            "key": "FILL_WATER_BARREL",
+            "name": "fill water barrel",
+            "building": "MASON",
+            "skill": "MASONRY",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CONCRETE",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reaction_flags": {
+                "fortress_mode": true
+            },
+            "reagents": [
+                {
+                    "code": "barrel",
+                    "type": "BARREL",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "LIQUID_MISC",
+                    "mat_id": "WATER",
+                    "count": 9,
+                    "dimension": 150,
+                    "to_container": "barrel"
+                }
+            ]
+        },
+        {
+            "key": "CRUSH_GRAVEL",
+            "name": "crush any stone into gravel",
+            "building": "MASON",
+            "skill": "MASONRY",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CONCRETE",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "stone_1",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "gravel_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "stone_2",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "gravel_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "stone_3",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "gravel_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "stone_4",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "gravel_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "gravel_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "gravel_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "gravel_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "gravel_bag_4"
+                }
+            ]
+        },
+        {
+            "key": "CRUSH_COMMON_GRAVEL",
+            "name": "crush common stone into gravel",
+            "building": "MASON",
+            "skill": "MASONRY",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CONCRETE",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "stone_1",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": true
+                    }
+                },
+                {
+                    "code": "gravel_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "stone_2",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": true
+                    }
+                },
+                {
+                    "code": "gravel_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "stone_3",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": true
+                    }
+                },
+                {
+                    "code": "gravel_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "stone_4",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": true
+                    }
+                },
+                {
+                    "code": "gravel_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "gravel_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "gravel_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "gravel_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "count": 8,
+                    "dimension": 150,
+                    "to_container": "gravel_bag_4"
+                }
+            ]
+        },
+        {
+            "key": "GRIND_VOLCANIC_SAND",
+            "name": "grind obsidian into sand",
+            "building": "NONE",
+            "skill": "MILLING",
+            "fuel": false,
+            "category": null,
+            "fallback_template": null,
+            "permissions": {
+                "mode": "NONE"
+            },
+            "reaction_flags": {
+                "fortress_mode": false
+            },
+            "reagents": [
+                {
+                    "code": "stone",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "sand_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_5",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_6",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_7",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_8",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_4"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_5"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_6"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_7"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_8"
+                }
+            ]
+        },
+        {
+            "key": "GRIND_VOLCANIC_SAND_FELSIC",
+            "name": "grind felsic stone into sand",
+            "building": "NONE",
+            "skill": "MILLING",
+            "fuel": false,
+            "category": null,
+            "fallback_template": null,
+            "permissions": {
+                "mode": "NONE"
+            },
+            "reaction_flags": {
+                "fortress_mode": false
+            },
+            "reagents": [
+                {
+                    "code": "stone",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "sand_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_5",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_6",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_7",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_8",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_4"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_5"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_6"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_7"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_8"
+                }
+            ]
+        },
+        {
+            "key": "GRIND_VOLCANIC_SAND_INTERMEDIATE",
+            "name": "grind intermediate stone into sand",
+            "building": "NONE",
+            "skill": "MILLING",
+            "fuel": false,
+            "category": null,
+            "fallback_template": null,
+            "permissions": {
+                "mode": "NONE"
+            },
+            "reaction_flags": {
+                "fortress_mode": false
+            },
+            "reagents": [
+                {
+                    "code": "stone",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "sand_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_5",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_6",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_7",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_8",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_4"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_5"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_6"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_7"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_8"
+                }
+            ]
+        },
+        {
+            "key": "GRIND_VOLCANIC_SAND_MAFIC",
+            "name": "grind mafic stone into sand",
+            "building": "NONE",
+            "skill": "MASONRY",
+            "fuel": false,
+            "category": null,
+            "fallback_template": null,
+            "permissions": {
+                "mode": "NONE"
+            },
+            "reaction_flags": {
+                "fortress_mode": false
+            },
+            "reagents": [
+                {
+                    "code": "stone",
+                    "type": "BOULDER_ANY",
+                    "quantity": 1,
+                    "flags": {
+                        "non_economic": false
+                    }
+                },
+                {
+                    "code": "sand_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_5",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_6",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_7",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                },
+                {
+                    "code": "sand_bag_8",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true,
+                        "empty": true
+                    }
+                }
+            ],
+            "products": [
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_1"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_2"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_3"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_4"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_5"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_6"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_7"
+                },
+                {
+                    "type": "POWDER_MISC",
+                    "mat_id": null,
+                    "count": 1,
+                    "dimension": 150,
+                    "to_container": "sand_bag_8"
+                }
+            ]
+        },
+        {
+            "key": "MIX_CONCRETE",
+            "name": "mix concrete",
+            "building": "MASON",
+            "skill": "MASONRY",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CONCRETE",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "sand_1",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "sand_bearing": true,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "sand_1"
+                },
+                {
+                    "code": "sand_2",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "sand_bearing": true,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "sand_2"
+                },
+                {
+                    "code": "sand_3",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "sand_bearing": true,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "sand_3"
+                },
+                {
+                    "code": "sand_4",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "sand_bearing": true,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "sand_4"
+                },
+                {
+                    "code": "sand_5",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "sand_bearing": true,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_5",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "sand_5"
+                },
+                {
+                    "code": "sand_6",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "sand_bearing": true,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_6",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "sand_6"
+                },
+                {
+                    "code": "sand_7",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "sand_bearing": true,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_7",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "sand_7"
+                },
+                {
+                    "code": "sand_8",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "sand_bearing": true,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_8",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "sand_8"
+                },
+                {
+                    "code": "cement",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_CEMENT",
+                    "quantity": 600,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "cement_bag",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "cement"
+                },
+                {
+                    "code": "gravel_1",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "quantity": 1200,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "gravel_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "gravel_1"
+                },
+                {
+                    "code": "gravel_2",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "quantity": 1200,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "gravel_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "gravel_2"
+                },
+                {
+                    "code": "water",
+                    "type": "WATER",
+                    "quantity": 450,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "water_barrel",
+                    "type": "BARREL",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "water"
+                }
+            ],
+            "products": [
+                {
+                    "type": "BLOCKS",
+                    "mat_id": "MAKING_CONCRETE_CONCRETE",
+                    "count": 31,
+                    "dimension": 150
+                }
+            ]
+        },
+        {
+            "key": "MIX_DWARVEN_CONCRETE",
+            "name": "mix dwarven concrete",
+            "building": "MASON",
+            "skill": "MASONRY",
+            "fuel": false,
+            "category": "MAKING_CONCRETE_CAT_CONCRETE",
+            "fallback_template": null,
+            "permissions": {
+                "mode": "AUTO"
+            },
+            "reagents": [
+                {
+                    "code": "volcanic_sand_1",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "volcanic_sand_1"
+                },
+                {
+                    "code": "volcanic_sand_2",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "volcanic_sand_2"
+                },
+                {
+                    "code": "volcanic_sand_3",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_3",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "volcanic_sand_3"
+                },
+                {
+                    "code": "volcanic_sand_4",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_4",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "volcanic_sand_4"
+                },
+                {
+                    "code": "volcanic_sand_5",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_5",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "volcanic_sand_5"
+                },
+                {
+                    "code": "volcanic_sand_6",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_6",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "volcanic_sand_6"
+                },
+                {
+                    "code": "volcanic_sand_7",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_7",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "volcanic_sand_7"
+                },
+                {
+                    "code": "volcanic_sand_8",
+                    "type": "POWDER",
+                    "quantity": 150,
+                    "mat_id": "MAKING_CONCRETE_VOLCANIC_SAND",
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "sand_bag_8",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "volcanic_sand_8"
+                },
+                {
+                    "code": "cement",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_CEMENT",
+                    "quantity": 600,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "cement_bag",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "cement"
+                },
+                {
+                    "code": "gravel_1",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "quantity": 1200,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "gravel_bag_1",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "gravel_1"
+                },
+                {
+                    "code": "gravel_2",
+                    "type": "POWDER",
+                    "mat_id": "MAKING_CONCRETE_GRAVEL",
+                    "quantity": 1200,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "gravel_bag_2",
+                    "type": "BAG",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "gravel_2"
+                },
+                {
+                    "code": "water",
+                    "type": "WATER",
+                    "quantity": 450,
+                    "flags": {
+                        "in_container": true
+                    }
+                },
+                {
+                    "code": "water_barrel",
+                    "type": "BARREL",
+                    "quantity": 1,
+                    "flags": {
+                        "preserve": true
+                    },
+                    "contains": "water"
+                }
+            ],
+            "products": [
+                {
+                    "type": "BLOCKS",
+                    "mat_id": "MAKING_CONCRETE_DWARVEN_CONCRETE",
+                    "count": 31,
+                    "dimension": 150
+                }
+            ]
+        }
+    ],
+    "categories": [
+        {
+            "key": "CEMENT",
+            "name": "Make cement",
+            "parent": ""
+        },
+        {
+            "key": "CONCRETE",
+            "name": "Make concrete",
+            "parent": ""
+        }
+    ]
+}

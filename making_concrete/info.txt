@@ -1,0 +1,36 @@
+[ID:making_concrete]
+[NUMERIC_VERSION:8]
+[DISPLAYED_VERSION:1.2.3]
+[EARLIEST_COMPATIBLE_NUMERIC_VERSION:1]
+[EARLIEST_COMPATIBLE_DISPLAYED_VERSION:1.0.0]
+[AUTHOR:grungeisdead]
+[NAME:Making Concrete]
+[DESCRIPTION:A concrete industry module for Refinish Metal.]
+[STEAM_TITLE:Making Concrete]
+
+[REQUIRES_ID:refinish_steel]
+
+[STEAM_TAG:mod]
+[STEAM_TAG:concrete]
+[STEAM_TAG:cement]
+[STEAM_TAG:material]
+[STEAM_TAG:inorganic]
+[STEAM_TAG:crafting]
+[STEAM_TAG:smelting]
+[STEAM_TAG:rawless]
+[STEAM_TAG:reaction]
+
+[STEAM_DESCRIPTION:
+
+============================================
+CHANGELOG v1.2.3: Mix Concrete
+============================================
+
+- Fixed a partial container bug which interfered with both mix concrete reactions.
+- Water barrels are now filled to 9 units, and water requirements to mix concrete are reduced to 3 units, which also reduces the reaction output from 32 to 31 concrete blocks.
+- This change prevents partially filled water barrels from causing issues with reagent recognition.
+- Dwarven concrete reaction name is now correctly identified as 'mix dwarven concrete'.
+
+]
+
+[STEAM_FILE_ID:3776249416]

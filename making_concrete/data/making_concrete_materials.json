@@ -1,0 +1,368 @@
+{
+    "module": {
+        "prefix": "MAKING_CONCRETE_",
+        "name": "Making Concrete",
+        "version": "1.1"
+    },
+    "materials": [
+        {
+            "key": "FARIN",
+            "name": "farin",
+            "material_class": "STONE",
+            "color": "LIGHT_GRAY",
+            "fallback_colors": [
+                "GRAY",
+                "ASH_GRAY"
+            ],
+            "value": 1,
+            "solid_density": 1500,
+            "liquid_density": 1400,
+            "molar_mass": null,
+            "heat": {
+                "spec_heat": 880,
+                "melting_point": 12000,
+                "boiling_point": null,
+                "ignite_point": null,
+                "heatdam_point": null,
+                "colddam_point": null,
+                "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 30000,
+                    "COMPRESSIVE": 30000,
+                    "TENSILE": 3000,
+                    "TORSION": 3000,
+                    "SHEAR": 3000,
+                    "BENDING": 3000
+                },
+                "fracture": {
+                    "IMPACT": 30000,
+                    "COMPRESSIVE": 30000,
+                    "TENSILE": 3000,
+                    "TORSION": 3000,
+                    "SHEAR": 3000,
+                    "BENDING": 3000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "MECHANICALLY_PROCESSED",
+                "RAW"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "CLINKER",
+            "name": "clinker",
+            "material_class": "STONE",
+            "color": "GRAY",
+            "fallback_colors": [
+                "ASH_GRAY",
+                "DARK_GRAY"
+            ],
+            "value": 5,
+            "solid_density": 3150,
+            "liquid_density": 2800,
+            "molar_mass": null,
+            "heat": {
+                "spec_heat": 730,
+                "melting_point": 12300,
+                "boiling_point": null,
+                "ignite_point": null,
+                "heatdam_point": null,
+                "colddam_point": null,
+                "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 150000,
+                    "COMPRESSIVE": 200000,
+                    "TENSILE": 25000,
+                    "TORSION": 25000,
+                    "SHEAR": 25000,
+                    "BENDING": 25000
+                },
+                "fracture": {
+                    "IMPACT": 150000,
+                    "COMPRESSIVE": 200000,
+                    "TENSILE": 25000,
+                    "TORSION": 25000,
+                    "SHEAR": 25000,
+                    "BENDING": 25000
+                },
+                "strain_at_yield": null,
+                "max_edge": 400
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "THERMALLY_PROCESSED",
+                "CHEMICALLY_PROCESSED",
+                "CALCIUM_SILICATE"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "CEMENT",
+            "name": "cement",
+            "material_class": "STONE",
+            "color": "ASH_GRAY",
+            "fallback_colors": [
+                "LIGHT_GRAY",
+                "GRAY"
+            ],
+            "value": 6,
+            "solid_density": 1500,
+            "liquid_density": 1400,
+            "molar_mass": null,
+            "heat": {
+                "spec_heat": 880,
+                "melting_point": 12500,
+                "boiling_point": null,
+                "ignite_point": null,
+                "heatdam_point": null,
+                "colddam_point": null,
+                "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 50000,
+                    "COMPRESSIVE": 40000,
+                    "TENSILE": 8000,
+                    "TORSION": 8000,
+                    "SHEAR": 8000,
+                    "BENDING": 8000
+                },
+                "fracture": {
+                    "IMPACT": 50000,
+                    "COMPRESSIVE": 40000,
+                    "TENSILE": 8000,
+                    "TORSION": 8000,
+                    "SHEAR": 8000,
+                    "BENDING": 8000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "MECHANICALLY_PROCESSED",
+                "BINDER"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "GRAVEL",
+            "name": "gravel",
+            "material_class": "STONE",
+            "color": "ASH_GRAY",
+            "fallback_colors": [
+                "GRAY",
+                "LIGHT_GRAY"
+            ],
+            "value": 1,
+            "solid_density": 1600,
+            "liquid_density": 1500,
+            "molar_mass": null,
+            "heat": {
+                "spec_heat": 800,
+                "melting_point": 12500,
+                "boiling_point": null,
+                "ignite_point": null,
+                "heatdam_point": null,
+                "colddam_point": null,
+                "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 30000,
+                    "COMPRESSIVE": 40000,
+                    "TENSILE": 3000,
+                    "TORSION": 3000,
+                    "SHEAR": 3000,
+                    "BENDING": 3000
+                },
+                "fracture": {
+                    "IMPACT": 30000,
+                    "COMPRESSIVE": 40000,
+                    "TENSILE": 3000,
+                    "TORSION": 3000,
+                    "SHEAR": 3000,
+                    "BENDING": 3000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "MECHANICALLY_PROCESSED",
+                "AGGREGATE"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "VOLCANIC_SAND",
+            "name": "volcanic sand",
+            "material_class": "STONE",
+            "color": "BLACK",
+            "fallback_colors": [
+                "CHARCOAL",
+                "DARK_GRAY"
+            ],
+            "value": 2,
+            "solid_density": 1300,
+            "liquid_density": 1200,
+            "molar_mass": null,
+            "heat": {
+                "spec_heat": 800,
+                "melting_point": 12800,
+                "boiling_point": 15200,
+                "ignite_point": 60001,
+                "heatdam_point": 60001,
+                "colddam_point": 60001,
+                "mat_fixed_temp": 60001
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 30000,
+                    "COMPRESSIVE": 40000,
+                    "TENSILE": 3000,
+                    "TORSION": 3000,
+                    "SHEAR": 3000,
+                    "BENDING": 3000
+                },
+                "fracture": {
+                    "IMPACT": 30000,
+                    "COMPRESSIVE": 40000,
+                    "TENSILE": 3000,
+                    "TORSION": 3000,
+                    "SHEAR": 3000,
+                    "BENDING": 3000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "MECHANICALLY_PROCESSED",
+                "AGGREGATE",
+                "POZZOLAN"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "CONCRETE",
+            "name": "concrete",
+            "material_class": "STONE",
+            "color": "LIGHT_GRAY",
+            "fallback_colors": [
+                "SILVER",
+                "ASH_GRAY"
+            ],
+            "value": 4,
+            "solid_density": 2400,
+            "liquid_density": 2300,
+            "molar_mass": null,
+            "heat": {
+                "spec_heat": 880,
+                "melting_point": 11200,
+                "boiling_point": null,
+                "ignite_point": null,
+                "heatdam_point": null,
+                "colddam_point": null,
+                "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 20000,
+                    "COMPRESSIVE": 30000,
+                    "TENSILE": 3000,
+                    "TORSION": 35000,
+                    "SHEAR": 10000,
+                    "BENDING": 3000
+                },
+                "fracture": {
+                    "IMPACT": 20000,
+                    "COMPRESSIVE": 30000,
+                    "TENSILE": 3000,
+                    "TORSION": 70000,
+                    "SHEAR": 10000,
+                    "BENDING": 3000
+                },
+                "strain_at_yield": null,
+                "max_edge": 50
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "CHEMICALLY_PROCESSED",
+                "THERMALLY_PROCESSED"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "DWARVEN_CONCRETE",
+            "name": "dwarven concrete",
+            "material_class": "STONE",
+            "color": "TAUPE_GRAY",
+            "fallback_colors": [
+                "GRAY",
+                "SLATE_GRAY"
+            ],
+            "value": 6,
+            "solid_density": 2000,
+            "liquid_density": 1900,
+            "molar_mass": null,
+            "heat": {
+                "spec_heat": 880,
+                "melting_point": 12600,
+                "boiling_point": 15000,
+                "ignite_point": 60001,
+                "heatdam_point": 60001,
+                "colddam_point": 60001,
+                "mat_fixed_temp": 60001
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 20000,
+                    "COMPRESSIVE": 30000,
+                    "TENSILE": 3000,
+                    "TORSION": 35000,
+                    "SHEAR": 10000,
+                    "BENDING": 3000
+                },
+                "fracture": {
+                    "IMPACT": 20000,
+                    "COMPRESSIVE": 30000,
+                    "TENSILE": 3000,
+                    "TORSION": 70000,
+                    "SHEAR": 10000,
+                    "BENDING": 3000
+                },
+                "strain_at_yield": null,
+                "max_edge": 50
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "CHEMICALLY_PROCESSED",
+                "THERMALLY_PROCESSED"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        }
+    ]
+}
