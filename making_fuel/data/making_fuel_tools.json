@@ -1,0 +1,525 @@
+{
+    "module": {
+        "id": "MAKING_FUEL",
+        "prefix": "MAKING_FUEL_"
+    },
+    "tools": [
+        {
+            "key": "SMALL_BOTTLE",
+            "name": "small bottle",
+            "name_plural": "small bottles",
+            "value": 10, "tile": 155,
+            "size": 150, "material_size": 1, "capacity": 3000,
+            "tool_use": [ "LIQUID_CONTAINER" ],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "LARGE_BOTTLE",
+            "name": "large bottle",
+            "name_plural": "large bottles",
+            "value": 10, "tile": 156,
+            "size": 300, "material_size": 1, "capacity": 6000,
+            "tool_use": [ "LIQUID_CONTAINER" ],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "SMALL_CASK",
+            "name": "small cask",
+            "name_plural": "small casks",
+            "value": 20, "tile": 233,
+            "size": 900, "material_size": 2, "capacity": 18000,
+            "tool_use": [ "LIQUID_CONTAINER" ],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "LARGE_CASK",
+            "name": "large cask",
+            "name_plural": "large casks",
+            "value": 30, "tile": 234,
+            "size": 1800, "material_size": 3, "capacity": 36000,
+            "tool_use": [ "LIQUID_CONTAINER" ],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "VAT",
+            "name": "vat",
+            "name_plural": "vats",
+            "value": 10, "tile": 156,
+            "size": 300, "material_size": 1, "capacity": 6000,
+            "tool_use": [ "LIQUID_CONTAINER" ],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "DRAIN_KEY",
+            "name": "key",
+            "name_plural": "keys",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:0:3:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:0:3:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:0:3:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:0:3:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:0:3:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 157,
+            "size": 30, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "CREMATE_KEY",
+            "name": "key",
+            "name_plural": "keys",
+            "value": 1, "tile": 157,
+            "size": 30, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "ROT_KEY",
+            "name": "key",
+            "name_plural": "keys",
+            "value": 1, "tile": 157,
+            "size": 30, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "KINDLING",
+            "name": "kindling",
+            "name_plural": "kindling",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:1:0:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:1:0:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:1:0:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:1:0:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:1:0:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 61,
+            "size": 78, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "BRANCH",
+            "name": "branch",
+            "name_plural": "branches",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:0:0:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:0:0:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:0:0:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:0:0:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:0:0:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 61,
+            "size": 312, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "CINDER",
+            "name": "cinder",
+            "name_plural": "cinders",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "PAGE:BOULDERS:0:13",
+                  "texpos_stone": { "source": "PAGE:BOULDERS:0:13", "fill": 7 },
+                  "texpos_wood":  { "source": "PAGE:BOULDERS:0:13", "fill": 7 },
+                  "texpos_metal": { "source": "PAGE:BOULDERS:0:13", "fill": 7 },
+                  "texpos_glass": { "source": "PAGE:BOULDERS:0:13", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 249,
+            "size": 75, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "DUNG",
+            "name": "pile",
+            "name_plural": "piles",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "PAGE:BOULDERS:1:15",
+                  "texpos_stone": { "source": "PAGE:BOULDERS:1:15", "fill": 7 },
+                  "texpos_wood":  { "source": "PAGE:BOULDERS:1:15", "fill": 7 },
+                  "texpos_metal": { "source": "PAGE:BOULDERS:1:15", "fill": 7 },
+                  "texpos_glass": { "source": "PAGE:BOULDERS:1:15", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 247,
+            "size": 75, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "STRAW",
+            "name": "thatch",
+            "name_plural": "thatches",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "PAGE:PLANT_CROPS:1:25",
+                  "texpos_stone": { "source": "PAGE:PLANT_CROPS:1:25", "fill": 7 },
+                  "texpos_wood":  { "source": "PAGE:PLANT_CROPS:1:25", "fill": 7 },
+                  "texpos_metal": { "source": "PAGE:PLANT_CROPS:1:25", "fill": 7 },
+                  "texpos_glass": { "source": "PAGE:PLANT_CROPS:1:25", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 61,
+            "size": 150, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "SAWDUST",
+            "name": "sawdust pile",
+            "name_plural": "sawdust piles",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:2:0:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:2:0:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:2:0:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:2:0:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:2:0:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 250,
+            "size": 78, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "BARK",
+            "name": "bark strip",
+            "name_plural": "bark strips",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "PAGE:TREES:7:3",
+                  "texpos_stone": { "source": "PAGE:TREES:7:3", "fill": 7 },
+                  "texpos_wood":  { "source": "PAGE:TREES:7:3", "fill": 7 },
+                  "texpos_metal": { "source": "PAGE:TREES:7:3", "fill": 7 },
+                  "texpos_glass": { "source": "PAGE:TREES:7:3", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 247,
+            "size": 78, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "MASH",
+            "name": "mash",
+            "name_plural": "mash",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "PAGE:ITEM_NATURE:1:0",
+                  "texpos_stone": { "source": "PAGE:ITEM_NATURE:1:0", "fill": 7 },
+                  "texpos_wood":  { "source": "PAGE:ITEM_NATURE:1:0", "fill": 7 },
+                  "texpos_metal": { "source": "PAGE:ITEM_NATURE:1:0", "fill": 7 },
+                  "texpos_glass": { "source": "PAGE:ITEM_NATURE:1:0", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 61,
+            "size": 75, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "TINDER",
+            "name": "tinder",
+            "name_plural": "tinder",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:2:3:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:2:3:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:2:3:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:2:3:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:2:3:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 250,
+            "size": 78, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "no_default_job": true
+            }
+        },
+        {
+            "key": "STRAW_DRIED",
+            "name": "thatch",
+            "name_plural": "thatches",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_plant_crops.png:1:25:12",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_plant_crops.png:1:25:12", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_plant_crops.png:1:25:12", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_plant_crops.png:1:25:12", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_plant_crops.png:1:25:12", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 61,
+            "size": 150, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "DUST",
+            "name": "dust",
+            "name_plural": "dust",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "PAGE:ITEM_CONSTRUCTION:2:3",
+                  "texpos_stone": { "source": "PAGE:ITEM_CONSTRUCTION:2:3", "fill": 7 },
+                  "texpos_wood":  { "source": "PAGE:ITEM_CONSTRUCTION:2:3", "fill": 7 },
+                  "texpos_metal": { "source": "PAGE:ITEM_CONSTRUCTION:2:3", "fill": 7 },
+                  "texpos_glass": { "source": "PAGE:ITEM_CONSTRUCTION:2:3", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 250,
+            "size": 400, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "GRAVEL",
+            "name": "gravel",
+            "name_plural": "gravel",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:0:1:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:0:1:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:0:1:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:0:1:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:0:1:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 249,
+            "size": 750, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "SCRAP",
+            "name": "scrap",
+            "name_plural": "scraps",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:1:1:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:1:1:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:1:1:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:1:1:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:1:1:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 250,
+            "size": 150, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "CULLET",
+            "name": "cullet",
+            "name_plural": "cullet",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:2:1:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:2:1:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:2:1:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:2:1:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:2:1:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 250,
+            "size": 150, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "WASTE",
+            "name": "waste",
+            "name_plural": "waste",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:3:2:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:3:2:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:3:2:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:3:2:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:3:2:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 250,
+            "size": 1200, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "SCALE",
+            "name": "flakes",
+            "name_plural": "flakes",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "PAGE:ITEM_CONSTRUCTION:2:3",
+                  "texpos_stone": { "source": "PAGE:ITEM_CONSTRUCTION:2:3", "fill": 7 },
+                  "texpos_wood":  { "source": "PAGE:ITEM_CONSTRUCTION:2:3", "fill": 7 },
+                  "texpos_metal": { "source": "PAGE:ITEM_CONSTRUCTION:2:3", "fill": 7 },
+                  "texpos_glass": { "source": "PAGE:ITEM_CONSTRUCTION:2:3", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 250,
+            "size": 60, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "CRUST",
+            "name": "crust",
+            "name_plural": "crusts",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:3:0:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:3:0:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:3:0:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:3:0:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:3:0:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 250,
+            "size": 150, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "BRIQUETTE",
+            "name": "briquette",
+            "name_plural": "briquettes",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_byproducts.png:1:3:4",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_byproducts.png:1:3:4", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_byproducts.png:1:3:4", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_byproducts.png:1:3:4", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_byproducts.png:1:3:4", "fill": 7 }
+                }
+            },
+            "value": 1, "tile": 254,
+            "size": 312, "material_size": 1, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "hard_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "TANK",
+            "name": "fuel tank",
+            "name_plural": "fuel tanks",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_fuel_tank.png:0:0:1",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_fuel_tank.png:0:0:1", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_fuel_tank.png:0:0:1", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_fuel_tank.png:0:0:1", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_fuel_tank.png:0:0:1", "fill": 7 }
+                }
+            },
+            "value": 50, "tile": 147,
+            "size": 4000, "material_size": 6, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "metal_mat": true
+            }
+        },
+        {
+            "key": "BURNER",
+            "name": "fuel burner",
+            "name_plural": "fuel burners",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_fuel_burner.png:0:0:1",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_fuel_burner.png:0:0:1", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_fuel_burner.png:0:0:1", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_fuel_burner.png:0:0:1", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_fuel_burner.png:0:0:1", "fill": 7 }
+                }
+            },
+            "value": 60, "tile": 15,
+            "size": 4000, "material_size": 9, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "metal_mat": true, "no_default_job": true
+            }
+        },
+        {
+            "key": "ATOMISER",
+            "name": "fuel atomiser",
+            "name_plural": "fuel atomisers",
+            "graphics": {
+                "fields": {
+                  "texpos_item":  "FILE:images/making_fuel_fuel_atomiser.png:0:0:1",
+                  "texpos_stone": { "source": "FILE:images/making_fuel_fuel_atomiser.png:0:0:1", "fill": 7 },
+                  "texpos_wood":  { "source": "FILE:images/making_fuel_fuel_atomiser.png:0:0:1", "fill": 7 },
+                  "texpos_metal": { "source": "FILE:images/making_fuel_fuel_atomiser.png:0:0:1", "fill": 7 },
+                  "texpos_glass": { "source": "FILE:images/making_fuel_fuel_atomiser.png:0:0:1", "fill": 7 }
+                }
+            },
+            "value": 20, "tile": 42,
+            "size": 1000, "material_size": 9, "capacity": 0,
+            "tool_use": [],
+            "flags": {
+                "metal_mat": true, "no_default_job": true
+            }
+        }
+    ]
+}

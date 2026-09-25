@@ -1,0 +1,2972 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_", "name": "Making Fuel", "version": "1.0"
+  },
+  "categories": [
+    {
+      "key": "CHARCOAL", "name": "Make charcoal", "parent": ""
+    },
+    {
+      "key": "CHARCOAL_FURNITURE", "name": "Make charcoal from furniture", "parent": "CHARCOAL"
+    },
+    {
+      "key": "CHARCOAL_FINISHED_GOODS", "name": "Make charcoal from finished goods", "parent": "CHARCOAL"
+    },
+    {
+      "key": "CHARCOAL_CONTAINERS", "name": "Make charcoal from containers", "parent": "CHARCOAL"
+    },
+    {
+      "key": "CHARCOAL_ARMS", "name": "Make charcoal from arms and armour", "parent": "CHARCOAL"
+    },
+    {
+      "key": "CHARCOAL_DEAD", "name": "Make charcoal from the dead", "parent": "CHARCOAL"
+    },
+    {
+      "key": "CHARCOAL_PLANTS", "name": "Make charcoal from plants", "parent": "CHARCOAL"
+    },
+    {
+      "key": "CHARCOAL_FOODSTOCK", "name": "Make charcoal from foodstock", "parent": "CHARCOAL"
+    },
+    {
+      "key": "CHARCOAL_TEXTILES", "name": "Make charcoal from textiles", "parent": "CHARCOAL"
+    }
+  ],
+  "reactions": [
+    {
+      "key": "CHAR_LOG", "name": "make charcoal from logs", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "log", "type": "WOOD", "quantity": 1,
+          "flags": {
+            "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BRANCHES", "name": "make charcoal from branches", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "trap", "type": "TOOL", "tool_id": "MAKING_FUEL_BRANCH", "quantity": 4
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_SAWDUST", "name": "make charcoal from sawdust", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "sawdust", "type": "TOOL", "tool_id": "MAKING_FUEL_SAWDUST", "quantity": 4
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BARK", "name": "make charcoal from bark", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bark", "type": "TOOL", "tool_id": "MAKING_FUEL_BARK", "quantity": 4
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PEAT_DRIED", "name": "make charcoal from dried peat", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "peat", "type": "BOULDER", "mat_id": "MAKING_FUEL_PEAT_DRIED", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CINDERS", "name": "make charcoal from cinders", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Four cinders make one charcoal.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cinders", "type": "BAR_ANY", "quantity": 600,
+          "reaction_class": "CINDER"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_STRAW", "name": "make charcoal from straw", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "straw", "type": "TOOL", "tool_id": "MAKING_FUEL_STRAW", "quantity": 4
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CHAR_BOULDER", "name": "make charcoal from char", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "One char makes four charcoal.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "boulder", "type": "BOULDER", "quantity": 1, "mat_id": "MAKING_FUEL_CHAR"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 4, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_DUNG", "name": "make charcoal from dung", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Dried pays two to three times more. Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "dung", "type": "TOOL", "tool_id": "MAKING_FUEL_DUNG", "mat_id": "MAKING_FUEL_DUNG", "quantity": 8
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BLOCKS", "name": "make charcoal from blocks", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "blocks", "type": "BLOCKS_ANY", "quantity": 3,
+          "flags": {
+            "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_KINDLING", "name": "make charcoal from kindling", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "kindling", "type": "TOOL", "tool_id": "MAKING_FUEL_KINDLING", "quantity": 8
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TINDER", "name": "make charcoal from tinder", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tinder", "type": "TOOL", "tool_id": "MAKING_FUEL_TINDER", "quantity": 8
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_DUNG_DRIED", "name": "make charcoal from dried dung", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "dung", "type": "TOOL", "tool_id": "MAKING_FUEL_DUNG", "mat_id": "MAKING_FUEL_DUNG_DRIED", "quantity": 8
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_MASH_DRIED", "name": "make charcoal from dried mash", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "mash", "type": "TOOL", "tool_id": "MAKING_FUEL_MASH", "mat_id": "MAKING_FUEL_MASH_DRIED", "quantity": 6
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_STRAW_DRIED", "name": "make charcoal from dried straw", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "straw", "type": "TOOL", "tool_id": "MAKING_FUEL_STRAW_DRIED", "quantity": 4
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PEAT", "name": "make charcoal from peat", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Dried pays two to three times more. Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "peat", "type": "BOULDER", "mat_id": "PEAT", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_MASH", "name": "make charcoal from mash", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "mash", "type": "TOOL", "tool_id": "MAKING_FUEL_MASH", "quantity": 6
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_ROT", "name": "make charcoal from rot", "category": "MAKING_FUEL_CAT_CHARCOAL",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "refuse", "type": "ANY", "quantity": 1,
+          "reaction_class": "ROTTEN",
+          "flags": {
+            "allow_buryable": false, "nearby": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_WEAPON", "name": "make charcoal from weapons", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "weapon", "type": "WEAPON", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_AMMO", "name": "make charcoal from ammunition", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "ammunition", "type": "AMMO", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_ARMOR", "name": "make charcoal from armour", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "armour", "type": "ARMOR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HANDWEAR", "name": "make charcoal from handwear", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "handwear", "type": "HANDWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HEADWEAR", "name": "make charcoal from headwear", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "headwear", "type": "HEADWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_LEGWEAR", "name": "make charcoal from legwear", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "legwear", "type": "LEGWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_QUIVER", "name": "make charcoal from quivers", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "quiver", "type": "QUIVER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_SHIELD_ANY", "name": "make charcoal from shields", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "shield", "type": "SHIELD_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_FOOTWEAR", "name": "make charcoal from footwear", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "footwear", "type": "FOOTWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_INSTRUMENT", "name": "make charcoal from instruments", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "instrument", "type": "INSTRUMENT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CRAFTS", "name": "make charcoal from crafts", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "craft", "type": "CRAFT_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_FURNITURE", "name": "make charcoal from furniture", "category": "MAKING_FUEL_CAT_CHARCOAL_FURNITURE",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Any wooden furnishing qualifies, containers only when empty, bins included.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "furniture", "type": "ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "furniture": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CORPSE", "name": "make charcoal from corpses", "category": "MAKING_FUEL_CAT_CHARCOAL_DEAD",
+      "description": "Yield follows the creature: size and build decide the take, and remainders bank. Citizens and pets are never taken.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "corpse", "type": "CORPSE", "quantity": 1,
+          "flags": {
+            "allow_buryable": false
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CORPSEPIECE", "name": "make charcoal from body parts", "category": "MAKING_FUEL_CAT_CHARCOAL_DEAD",
+      "description": "Yield follows the creature: size and build decide the take, and remainders bank. Citizens and pets are never taken.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "corpse_pieces", "type": "CORPSEPIECE", "quantity": 1,
+          "flags": {
+            "allow_buryable": false, "bone": false
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_SKULL", "name": "make charcoal from skulls", "category": "MAKING_FUEL_CAT_CHARCOAL_DEAD",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "skull", "type": "BODY_PART", "quantity": 10,
+          "flags": {
+            "allow_buryable": false, "body_part": true, "totemable": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_LEATHER", "name": "make charcoal from leather", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hide", "type": "SKIN_TANNED", "quantity": 3
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BONE", "name": "make charcoal from bones", "category": "MAKING_FUEL_CAT_CHARCOAL_DEAD",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bone", "type": "BODY_PART", "quantity": 10,
+          "flags": {
+            "allow_buryable": false, "body_part": true, "bone": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_REMAINS", "name": "make charcoal from remains", "category": "MAKING_FUEL_CAT_CHARCOAL_DEAD",
+      "description": "Yield follows the creature: size and build decide the take, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "remains", "type": "REMAINS", "quantity": 8,
+          "flags": {
+            "allow_buryable": false, "nearby": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_ANIMALTRAP", "name": "make charcoal from animal traps", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "trap", "type": "ANIMALTRAP", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_ARMORSTAND", "name": "make charcoal from armorstands", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "armorstand", "type": "ARMORSTAND", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BARREL", "name": "make charcoal from barrels", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "barrel", "type": "BARREL", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BED", "name": "make charcoal from beds", "category": "MAKING_FUEL_CAT_CHARCOAL_FURNITURE",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bed", "type": "BED", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BIN", "name": "make charcoal from bins", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bin", "type": "BIN", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BUCKET", "name": "make charcoal from buckets", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bucket", "type": "BUCKET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CABINET", "name": "make charcoal from cabinets", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cabinet", "type": "CABINET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CAGE", "name": "make charcoal from cages", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cage", "type": "CAGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CHAIR", "name": "make charcoal from chairs", "category": "MAKING_FUEL_CAT_CHARCOAL_FURNITURE",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "chair", "type": "CHAIR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_COFFIN", "name": "make charcoal from caskets", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "casket", "type": "COFFIN", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_BOX", "name": "make charcoal from chests", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "chest", "type": "BOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_DOOR", "name": "make charcoal from doors", "category": "MAKING_FUEL_CAT_CHARCOAL_FURNITURE",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "door", "type": "DOOR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_FLOODGATE", "name": "make charcoal from floodgates", "category": "MAKING_FUEL_CAT_CHARCOAL_FURNITURE",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "floodgate", "type": "FLOODGATE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_GOBLET", "name": "make charcoal from cups", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cup", "type": "GOBLET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_GRATE", "name": "make charcoal from grates", "category": "MAKING_FUEL_CAT_CHARCOAL_FURNITURE",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "grate", "type": "GRATE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HATCH", "name": "make charcoal from hatches", "category": "MAKING_FUEL_CAT_CHARCOAL_FURNITURE",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hatch", "type": "HATCH_COVER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_JUG", "name": "make charcoal from jugs", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "jug", "type": "JUG", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_LIQUID_CONTAINER", "name": "make charcoal from liquid containers", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "liquid_container", "type": "HAS_LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_FOOD_STORAGE", "name": "make charcoal from food containers", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "food_container", "type": "HAS_FOOD_STORAGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_HIVE", "name": "make charcoal from hives", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hive", "type": "HAS_HIVE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_NEST_BOX", "name": "make charcoal from nest boxes", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "nest_box", "type": "HAS_NEST_BOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TABLE", "name": "make charcoal from tables", "category": "MAKING_FUEL_CAT_CHARCOAL_FURNITURE",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "table", "type": "TABLE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_TRACK_CART", "name": "make charcoal from minecarts", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "minecart", "type": "HAS_TRACK_CART", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_HEAVY_OBJECT_HAULING", "name": "make charcoal from wheelbarrows", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "wheelbarrow", "type": "HAS_HEAVY_OBJECT_HAULING", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_STAND_AND_WORK_ABOVE", "name": "make charcoal from stepladders", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "stepladder", "type": "HAS_STAND_AND_WORK_ABOVE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_ROLL_UP_SHEET", "name": "make charcoal from scroll rollers", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "scroll_roller", "type": "HAS_ROLL_UP_SHEET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_PROTECT_FOLDED_SHEETS", "name": "make charcoal from book bindings", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "book_binding", "type": "HAS_PROTECT_FOLDED_SHEETS", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_BOOKCASE", "name": "make charcoal from bookcases", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bookcase", "type": "HAS_BOOKCASE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_DISPLAY_OBJECT", "name": "make charcoal from pedestals and display cases", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "display", "type": "HAS_DISPLAY_OBJECT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_GAMES_OF_CHANCE", "name": "make charcoal from dice", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "die", "type": "HAS_GAMES_OF_CHANCE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_HAS_DIVINATION", "name": "make charcoal from divination dice", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "divination_die", "type": "HAS_DIVINATION", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_WEAPONRACK", "name": "make charcoal from weaponracks", "category": "MAKING_FUEL_CAT_CHARCOAL_CONTAINERS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "weaponrack", "type": "WEAPONRACK", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_ENORMOUSCORKSCREW", "name": "make charcoal from enormous corkscrews", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "corkscrew", "type": "ENORMOUSCORKSCREW", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_SPIKEDBALL", "name": "make charcoal from spiked balls", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "spiked_ball", "type": "SPIKEDBALL", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_MENACINGSPIKE", "name": "make charcoal from menacing spikes", "category": "MAKING_FUEL_CAT_CHARCOAL_ARMS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "menacing_spikes", "type": "MENACINGSPIKE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TOY", "name": "make charcoal from toys", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy", "type": "TOY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TOY_PUZZLEBOX", "name": "make charcoal from puzzleboxes", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "puzzlebox", "type": "TOY_PUZZLEBOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TOY_BOAT", "name": "make charcoal from toy boats", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_boat", "type": "TOY_BOAT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TOY_HAMMER", "name": "make charcoal from toy hammers", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_hammer", "type": "TOY_HAMMER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TOY_AXE", "name": "make charcoal from toy axes", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_axe", "type": "TOY_AXE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TOY_MINIFORGE", "name": "make charcoal from toy mini-forges", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "miniforge", "type": "TOY_MINIFORGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_TOTEM", "name": "make charcoal from totems", "category": "MAKING_FUEL_CAT_CHARCOAL_FINISHED_GOODS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "totem", "type": "TOTEM", "quantity": 3,
+          "flags": {
+            "non_artifact": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_MEAT", "name": "make charcoal from meat and organs", "category": "MAKING_FUEL_CAT_CHARCOAL_FOODSTOCK",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "meat", "type": "MEAT", "quantity": 10,
+          "flags": {
+            "allow_buryable": false
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_RAW_FISH", "name": "make charcoal from raw fish", "category": "MAKING_FUEL_CAT_CHARCOAL_FOODSTOCK",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "raw_fish", "type": "FISH_RAW", "quantity": 10
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_FISH", "name": "make charcoal from prepared fish", "category": "MAKING_FUEL_CAT_CHARCOAL_FOODSTOCK",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "fish", "type": "FISH", "quantity": 10
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CHEESE", "name": "make charcoal from cheese", "category": "MAKING_FUEL_CAT_CHARCOAL_FOODSTOCK",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cheese", "type": "CHEESE", "quantity": 10
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_FOOD", "name": "make charcoal from prepared meals", "category": "MAKING_FUEL_CAT_CHARCOAL_FOODSTOCK",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "food", "type": "FOOD", "quantity": 10
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_EGG", "name": "make charcoal from eggs", "category": "MAKING_FUEL_CAT_CHARCOAL_FOODSTOCK",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "egg", "type": "EGG", "quantity": 12
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT_MILLABLE", "name": "make charcoal from millable plants", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 15,
+          "flags": {
+            "plant": true, "millable": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT_PROCESSABLE", "name": "make charcoal from processable plants", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 15,
+          "flags": {
+            "plant": true, "processable": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT_COOKABLE", "name": "make charcoal from cookable plants", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 15,
+          "flags": {
+            "plant": true, "cookable": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT_SEEDING", "name": "make charcoal from seeding plants", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 15,
+          "has_material_reaction_product": "SEED_MAT",
+          "flags": {
+            "plant": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT_BREWING", "name": "make charcoal from fermentable plants", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 15,
+          "has_material_reaction_product": "DRINK_MAT",
+          "flags": {
+            "plant": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT_PRESSING_OIL", "name": "make charcoal from oil-bearing plants", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 15,
+          "has_material_reaction_product": "PRESS_LIQUID_MAT",
+          "flags": {
+            "plant": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT_PRESSING_PAPER", "name": "make charcoal from paper-slurryable plants", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 15,
+          "has_material_reaction_product": "PRESS_PAPER_MAT",
+          "flags": {
+            "plant": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT", "name": "make charcoal from plants", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 15,
+          "flags": {
+            "plant": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_SEEDS", "name": "make charcoal from seedstock", "category": "MAKING_FUEL_CAT_CHARCOAL_PLANTS",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "seeds", "type": "SEEDS", "quantity": 20
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_PLANT_GROWTH", "name": "make charcoal from leaves and fruit", "category": "MAKING_FUEL_CAT_CHARCOAL_FOODSTOCK",
+      "description": "Yield follows the size and material of what goes in; remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "growth", "type": "PLANT_GROWTH", "quantity": 20
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CLOTH", "name": "make charcoal from cloth", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 200000,
+          "flags": {
+            "non_artifact": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CLOTH_PLANT", "name": "make charcoal from plant cloth", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 200000,
+          "flags": {
+            "non_artifact": true, "plant": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CLOTH_YARN", "name": "make charcoal from yarn cloth", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 200000,
+          "flags": {
+            "non_artifact": true, "yarn": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CLOTH_HAIR", "name": "make charcoal from hair cloth", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 200000,
+          "flags": {
+            "non_artifact": true, "hair_wool": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_CLOTH_SILK", "name": "make charcoal from silk cloth", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 200000,
+          "flags": {
+            "non_artifact": true, "silk": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_THREAD", "name": "make charcoal from thread", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 450000
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_THREAD_PLANT", "name": "make charcoal from plant thread", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 450000,
+          "flags": {
+            "plant": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_THREAD_YARN", "name": "make charcoal from yarn", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 450000,
+          "flags": {
+            "yarn": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_THREAD_HAIR", "name": "make charcoal from hair thread", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 450000,
+          "flags": {
+            "hair_wool": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "CHAR_THREAD_SILK", "name": "make charcoal from silk thread", "category": "MAKING_FUEL_CAT_CHARCOAL_TEXTILES",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 450000,
+          "flags": {
+            "silk": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 1, "dimension": 150
+        }
+      ]
+    }
+  ]
+}

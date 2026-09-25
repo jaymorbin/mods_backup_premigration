@@ -1,0 +1,509 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_", "name": "Making Fuel",
+    "version": "1.0"
+  },
+  "plants": [
+    {
+      "key": "COAL_HOST", "name": "coal host", "name_plural": "coal hosts",
+      "plant_class": "BASIC_CROP",
+      "plant_flags": {},
+      "materials": [
+        {
+          "key": "CHARCOAL", "name": "charcoal",
+          "graphics": {"bar": {"source": "TINT:coal"}, "texflag": "BUILTIN:COAL"},
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "BLACK", "DARK_GRAY"
+          ],
+          "value": 2,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 500,
+          "reaction_classes": [
+            "CHARCOAL", "FUEL", "FUEL_SMELTING"
+          ]
+        },
+        {
+          "key": "COKE", "name": "coke",
+          "graphics": {"bar": {"source": "TINT:coal"}, "texflag": "BUILTIN:COAL"},
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "BLACK", "DARK_GRAY"
+          ],
+          "value": 2,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 1000,
+          "reaction_classes": [
+            "COKE", "FUEL", "FUEL_SMELTING"
+          ]
+        },
+        {
+          "key": "COAL", "name": "coal",
+          "graphics": {"bar": {"source": "TINT:coal"}, "texflag": "BUILTIN:COAL"},
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "BLACK", "DARK_GRAY"
+          ],
+          "value": 2,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 1300,
+          "reaction_classes": [
+            "COAL", "FUEL", "FUEL_SMELTING"
+          ]
+        },
+        {
+          "key": "CINDER", "name": "cinders",
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "BLACK", "DARK_GRAY"
+          ],
+          "graphics": {"bar": {"source": "TINT:cinders"}, "texflag": "BUILTIN:COAL"},
+          "value": 1,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 350,
+          "reaction_classes": [
+            "CINDER", "FINE_COAL"
+          ]
+        },
+        {
+          "key": "GREEN_COKE", "name": "green coke",
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "TAUPE_GRAY", "DARK_GRAY"
+          ],
+          "graphics": {
+            "bar": { "source": "TINT:green_coke" }
+          },
+          "value": 1,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 700,
+          "reaction_classes": [
+            "GREEN_COKE"
+          ]
+        },
+        {
+          "key": "BREEZE_COKE", "name": "coke breeze",
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "TAUPE_GRAY", "DARK_GRAY"
+          ],
+          "graphics": {
+            "bar": { "source": "TINT:breeze" }
+          },
+          "value": 1,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 900,
+          "reaction_classes": [
+            "BREEZE_COKE", "FINE_COAL"
+          ]
+        },
+        {
+          "key": "ASH_COAL",
+          "name": "coal ash",
+          "material_class": "SOIL",
+          "color": "TAUPE_GRAY",
+          "fallback_colors": [ "BLACK", "DARK_GRAY" ],
+          "graphics": {
+            "bar": { "source": "TINT:powder" }
+          },
+          "value": 1,
+          "heat": {
+            "spec_heat": 800, "melting_point": 13800, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 900,
+          "reaction_classes": [ "ASH_COAL", "POZZOLAN" ]
+        },
+        {
+          "key": "BRIQUETTE_COKE", "name": "coke briquette",
+          "graphics": {
+            "bar": { "source": "TINT:briquette" }
+          },
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "TAUPE_GRAY", "DARK_GRAY"
+          ],
+          "value": 2,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 1000,
+          "reaction_classes": [
+            "BRIQUETTE_COKE", "COKE", "FUEL", "FUEL_SMELTING"
+          ]
+        },
+        {
+          "key": "BRIQUETTE_CHARCOAL", "name": "charcoal briquette",
+          "graphics": {
+            "bar": { "source": "TINT:briquette" }
+          },
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "TAUPE_GRAY", "DARK_GRAY"
+          ],
+          "value": 2,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 1000,
+          "reaction_classes": [
+            "BRIQUETTE_CHARCOAL", "CHARCOAL", "FUEL", "FUEL_SMELTING"
+          ]
+        },
+        {
+          "key": "BRIQUETTE_COAL", "name": "coal briquette",
+          "graphics": {
+            "bar": { "source": "TINT:briquette" }
+          },
+          "material_class": "SOIL",
+          "color": "CHARCOAL",
+          "fallback_colors": [
+            "TAUPE_GRAY", "DARK_GRAY"
+          ],
+          "value": 2,
+          "heat": {
+            "spec_heat": 409, "melting_point": 60001, "boiling_point": null, "ignite_point": 11708, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 1000,
+          "reaction_classes": [
+            "BRIQUETTE_COAL", "COAL", "FUEL", "FUEL_SMELTING"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "DYE_HOST", "name": "dye host", "name_plural": "dye hosts",
+      "plant_class": "BASIC_CROP",
+      "plant_flags": {},
+      "materials": [
+        {
+          "key": "CARBON_BLACK", "name": "carbon black dye",
+          "material_class": "DYE",
+          "color": "BLACK",
+          "fallback_colors": [
+            "CHARCOAL"
+          ],
+          "value": 5,
+          "heat": {
+            "spec_heat": 710, "melting_point": 16556, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 140000, "COMPRESSIVE": 350000, "TENSILE": 40000, "TORSION": 40000, "SHEAR": 40000, "BENDING": 40000
+            },
+            "fracture": {
+              "IMPACT": 280000, "COMPRESSIVE": 700000, "TENSILE": 80000, "TORSION": 80000, "SHEAR": 80000, "BENDING": 80000
+            },
+            "strain_at_yield": null,
+            "max_edge": 10
+          },
+          "solid_density": 1800,
+          "reaction_classes": [
+            "CARBON_BLACK"
+          ]
+        },
+        {
+          "key": "DYE_ALIZARIN", "name": "alizarin dye",
+          "material_class": "DYE",
+          "color": "CRIMSON",
+          "fallback_colors": [
+            "RED", "SCARLET"
+          ],
+          "value": 8,
+          "heat": {
+            "spec_heat": 1400, "melting_point": 10520, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 600,
+          "reaction_classes": [
+            "DYE_ALIZARIN"
+          ]
+        },
+        {
+          "key": "DYE_INDIGO", "name": "indigo dye",
+          "material_class": "DYE",
+          "color": "INDIGO",
+          "fallback_colors": [
+            "DARK_INDIGO", "MIDNIGHT_BLUE"
+          ],
+          "value": 8,
+          "heat": {
+            "spec_heat": 1400, "melting_point": 10560, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 600,
+          "reaction_classes": [
+            "DYE_INDIGO"
+          ]
+        },
+        {
+          "key": "DYE_IRON_BLACK", "name": "iron black dye",
+          "material_class": "DYE",
+          "color": "BLACK",
+          "fallback_colors": [
+            "CHARCOAL", "DARK_GRAY"
+          ],
+          "value": 8,
+          "heat": {
+            "spec_heat": 1400, "melting_point": 10480, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 600,
+          "reaction_classes": [
+            "DYE_IRON_BLACK"
+          ]
+        },
+        {
+          "key": "DYE_MAGENTA", "name": "magenta dye",
+          "material_class": "DYE",
+          "color": "RED_PURPLE",
+          "fallback_colors": [
+            "HELIOTROPE", "DARK_PINK"
+          ],
+          "value": 10,
+          "heat": {
+            "spec_heat": 1400, "melting_point": 10480, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 600,
+          "reaction_classes": [
+            "DYE_MAGENTA"
+          ]
+        },
+        {
+          "key": "DYE_MAUVE", "name": "mauve dye",
+          "material_class": "DYE",
+          "color": "MAUVE",
+          "fallback_colors": [
+            "VIOLET", "PURPLE"
+          ],
+          "value": 12,
+          "heat": {
+            "spec_heat": 1400, "melting_point": 10480, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 600,
+          "reaction_classes": [
+            "DYE_MAUVE"
+          ]
+        },
+        {
+          "key": "DYE_VERDIGRIS", "name": "verdigris dye",
+          "material_class": "DYE",
+          "color": "GREEN",
+          "fallback_colors": [
+            "SEA_GREEN", "DARK_GREEN"
+          ],
+          "value": 8,
+          "heat": {
+            "spec_heat": 1400, "melting_point": 10480, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 600,
+          "reaction_classes": [
+            "DYE_VERDIGRIS"
+          ]
+        },
+        {
+          "key": "DYE_VIOLET", "name": "violet dye",
+          "material_class": "DYE",
+          "color": "VIOLET",
+          "fallback_colors": [
+            "PURPLE", "MAUVE"
+          ],
+          "value": 12,
+          "heat": {
+            "spec_heat": 1400, "melting_point": 10480, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+          },
+          "strength": {
+            "yield": {
+              "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+            },
+            "fracture": {
+              "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+            },
+            "strain_at_yield": null,
+            "max_edge": 0
+          },
+          "solid_density": 600,
+          "reaction_classes": [
+            "DYE_VIOLET"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1473 @@
+{
+    "module": {
+        "prefix": "MAKING_FUEL_", "name": "Making Fuel",
+        "version": "1.0"
+    },
+    "materials": [
+        {
+            "key": "AMMONIA", "name": "ammonia",
+            "names": {
+                "liquid": "ammonia", "solid": "frozen ammonia", "gas": "ammonia gas"
+            },
+            "material_class": "LIQUID",
+            "color": "SAFFRON",
+            "fallback_colors": [
+                "AMBER", "YELLOW"
+            ],
+            "value": 2,
+            "solid_density": 900, "liquid_density": 900, "molar_mass": null,
+            "heat": {
+                "spec_heat": 4200, "melting_point": 9896, "boiling_point": 10180, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "AMMONIA", "ALKALI"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "ANILINE", "name": "aniline",
+            "names": {
+                "liquid": "aniline", "solid": "frozen aniline", "gas": "aniline vapor"
+            },
+            "material_class": "LIQUID",
+            "color": "LIGHT_BROWN",
+            "fallback_colors": [
+                "BROWN", "RAW_UMBER"
+            ],
+            "value": 8,
+            "solid_density": 1020, "liquid_density": 1020, "molar_mass": null,
+            "heat": {
+                "spec_heat": 2080, "melting_point": 9989, "boiling_point": 10331, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "ANILINE"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "ANTHRACENE", "name": "anthracene",
+            "material_class": "STONE",
+            "color": "FLAX",
+            "fallback_colors": [
+                "CREAM", "WHITE"
+            ],
+            "value": 5,
+            "solid_density": 1250, "liquid_density": 1100, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1300, "melting_point": 10389, "boiling_point": 10612, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "graphics": {
+                "boulder": "TINT:boulders_0_9"
+            },
+            "reaction_classes": [
+                "ANTHRACENE"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "BENZENE", "name": "benzene",
+            "names": {
+                "liquid": "benzene", "solid": "frozen benzene", "gas": "boiling benzene"
+            },
+            "material_class": "LIQUID",
+            "color": "CLEAR",
+            "fallback_colors": [
+                "IVORY", "WHITE"
+            ],
+            "value": 2,
+            "solid_density": 900, "liquid_density": 900, "molar_mass": null,
+            "heat": {
+                "spec_heat": 4200, "melting_point": 9896, "boiling_point": 10180, "ignite_point": 10896, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "BENZENE", "FUEL_LIQUID", "FUEL_LIQUID_LIGHT"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "CHAR", "name": "char",
+            "material_class": "SOIL",
+            "color": "CHARCOAL",
+            "fallback_colors": [
+                "TAUPE_GRAY", "DARK_GRAY"
+            ],
+            "value": 1,
+            "solid_density": 350, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 840, "melting_point": 60001, "boiling_point": null, "ignite_point": 10628, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "graphics": {
+                "boulder": "TINT:boulders_0_3"
+            },
+            "reaction_classes": [
+                "CHAR"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "CREOSOTE", "name": "creosote",
+            "names": {
+                "liquid": "creosote", "solid": "frozen creosote", "gas": "boiling creosote"
+            },
+            "material_class": "LIQUID",
+            "color": "DARK_BROWN",
+            "fallback_colors": [
+                "AMBER", "CHARCOAL"
+            ],
+            "value": 4,
+            "solid_density": 1080, "liquid_density": 1075, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1700, "melting_point": 9964, "boiling_point": 10450, "ignite_point": 10603, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "CREOSOTE", "FUEL_LIQUID", "FUEL_LIQUID_HEAVY"
+            ],
+            "reaction_products": [
+                {
+                    "id": "SEAL_MAT",
+                    "mat_id": "MAKING_FUEL_CREOSOTE"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+                {
+            "key": "NAPHTHA", "name": "naphtha",
+            "names": {
+                "liquid": "naphtha", "solid": "frozen naphtha", "gas": "boiling naphtha"
+            },
+            "material_class": "LIQUID",
+            "color": "AMBER",
+            "fallback_colors": [
+                "YELLOW", "AMBER"
+            ],
+            "value": 6,
+            "solid_density": 760, "liquid_density": 730, "molar_mass": null,
+            "heat": {
+                "spec_heat": 2100, "melting_point": 9700, "boiling_point": 10160, "ignite_point": 10504, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "NAPHTHA", "SOLVENT", "FUEL_LIQUID", "FUEL_LIQUID_LIGHT"
+            ],
+            "reaction_products": [
+                {
+                    "id": "SEAL_MAT",
+                    "mat_id": "MAKING_FUEL_NAPHTHA"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "KEROSENE", "name": "kerosene",
+            "names": {
+                "liquid": "kerosene", "solid": "frozen kerosene", "gas": "boiling kerosene"
+            },
+            "material_class": "LIQUID",
+            "color": "PALE_BLUE",
+            "fallback_colors": [
+                "CYAN", "LIGHT_GRAY"
+            ],
+            "value": 8,
+            "solid_density": 820, "liquid_density": 800, "molar_mass": null,
+            "heat": {
+                "spec_heat": 2000, "melting_point": 9800, "boiling_point": 10360, "ignite_point": 10396, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "KEROSENE", "OIL_LAMP", "FUEL_LIQUID", "FUEL_LIQUID_LIGHT"
+            ],
+            "reaction_products": [
+                {
+                    "id": "SEAL_MAT",
+                    "mat_id": "MAKING_FUEL_KEROSENE"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "OIL_LUBRICANT", "name": "lubricant",
+            "names": {
+                "liquid": "lubricant", "solid": "frozen lubricant", "gas": "boiling lubricant"
+            },
+            "material_class": "LIQUID",
+            "color": "AMBER",
+            "fallback_colors": [
+                "AMBER", "DARK_BROWN"
+            ],
+            "value": 10,
+            "solid_density": 900, "liquid_density": 880, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1900, "melting_point": 9900, "boiling_point": 10700, "ignite_point": 10648, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "OIL_LUBRICANT", "LUBRICANT", "FUEL_LIQUID", "FUEL_LIQUID_HEAVY"
+            ],
+            "reaction_products": [
+                {
+                    "id": "SEAL_MAT",
+                    "mat_id": "MAKING_FUEL_OIL_LUBRICANT"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "DUNG", "name": "dung",
+            "material_class": "SOIL",
+            "color": "CHOCOLATE",
+            "fallback_colors": [
+                "BROWN", "CHESTNUT"
+            ],
+            "value": 1,
+            "solid_density": 700, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 840, "melting_point": 60001, "boiling_point": null, "ignite_point": 10628, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["cake", "cakes"],
+            "reaction_classes": [
+                "DUNG"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "DUNG_DRIED", "name": "dried dung",
+            "material_class": "SOIL",
+            "color": "BROWN",
+            "fallback_colors": [
+                "RUSSET", "CHESTNUT"
+            ],
+            "value": 1,
+            "solid_density": 400, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 840, "melting_point": 60001, "boiling_point": null, "ignite_point": 10508, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["cake", "cakes"],
+            "reaction_classes": [
+                "DUNG_DRIED", "FUEL", "FUEL_BULK"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "GLUE", "name": "glue",
+            "names": {"liquid": "glue", "solid": "solid glue", "gas": "boiling glue"},
+            "material_class": "LIQUID",
+            "color": "AMBER",
+            "fallback_colors": [
+                "BROWN", "TAN"
+            ],
+            "value": 3,
+            "solid_density": 1100, "liquid_density": 1100, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 9950, "boiling_point": 10450, "ignite_point": 10508, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "GLUE"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "MASH", "name": "fresh",
+            "material_class": "SOIL",
+            "color": "BROWN",
+            "fallback_colors": [
+                "CHESTNUT", "TAN"
+            ],
+            "value": 1,
+            "solid_density": 970, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 820, "melting_point": 60001, "boiling_point": null, "ignite_point": 10568, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["slab", "slabs"],
+            "reaction_classes": [
+                "MASH"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "MASH_DRIED", "name": "dried",
+            "material_class": "SOIL",
+            "color": "BROWN",
+            "fallback_colors": [
+                "CHESTNUT", "TAN"
+            ],
+            "value": 1,
+            "solid_density": 500, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 820, "melting_point": 60001, "boiling_point": null, "ignite_point": 10448, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["cake", "cakes"],
+            "reaction_classes": [
+                "MASH_DRIED", "FUEL", "FUEL_BULK"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "METHANOL", "name": "methanol",
+            "names": {
+                "liquid": "methanol", "solid": "frozen methanol", "gas": "methanol vapor"
+            },
+            "material_class": "LIQUID",
+            "color": "CLEAR",
+            "fallback_colors": [
+                "WHITE", "IVORY"
+            ],
+            "value": 2,
+            "solid_density": 900, "liquid_density": 792, "molar_mass": null,
+            "heat": {
+                "spec_heat": 4200, "melting_point": 9824, "boiling_point": 10116, "ignite_point": 10819, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "METHANOL", "FUEL_LIQUID", "FUEL_LIQUID_LIGHT"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "NAPHTHALENE", "name": "naphthalene",
+            "material_class": "STONE",
+            "color": "WHITE",
+            "fallback_colors": [
+                "IVORY", "CLEAR"
+            ],
+            "value": 4,
+            "solid_density": 1100, "liquid_density": 1050, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1200, "melting_point": 10108, "boiling_point": 10900, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "graphics": {
+                "boulder": "TINT:boulders_0_9"
+            },
+            "reaction_classes": [
+                "NAPHTHALENE"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "OIL_CRUDE", "name": "crude oil",
+            "names": {
+                "liquid": "crude oil", "solid": "frozen crude oil", "gas": "boiling crude oil"
+            },
+            "material_class": "LIQUID",
+            "color": "BLACK",
+            "fallback_colors": [
+                "DARK_BROWN", "CHARCOAL"
+            ],
+            "value": 3,
+            "solid_density": 950, "liquid_density": 847, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1900, "melting_point": 9982, "boiling_point": 10630, "ignite_point": 10473, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "OIL_CRUDE", "TAR_INORGANIC", "FUEL_LIQUID", "FUEL_LIQUID_HEAVY"
+            ],
+            "reaction_products": [
+                {
+                    "id": "PITCH_MAT",
+                    "mat_id": "MKGFUEL_BITUMEN"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "OIL_BONE", "name": "bone oil",
+            "names": {
+                "liquid": "bone oil", "solid": "frozen bone oil", "gas": "boiling bone oil"
+            },
+            "material_class": "LIQUID",
+            "color": "AMBER",
+            "fallback_colors": [
+                "DARK_BROWN", "CHARCOAL"
+            ],
+            "value": 3,
+            "solid_density": 950, "liquid_density": 920, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1900, "melting_point": 9946, "boiling_point": 10540, "ignite_point": 10495, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "OIL_BONE", "TAR", "FUEL_LIQUID", "FUEL_LIQUID_HEAVY"
+            ],
+            "reaction_products": [
+                {
+                    "id": "SOAP_MAT",
+                    "mat_id": "MAKING_FUEL_SOAP_TAR"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "OIL_TALLOW", "name": "tallow oil",
+            "names": {
+                "liquid": "tallow oil", "solid": "frozen tallow oil", "gas": "boiling tallow oil"
+            },
+            "material_class": "LIQUID",
+            "color": "FLAX",
+            "fallback_colors": [
+                "CREAM", "AMBER"
+            ],
+            "value": 3,
+            "solid_density": 940, "liquid_density": 900, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1900, "melting_point": 10018, "boiling_point": 10560, "ignite_point": 10630, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "OIL_TALLOW", "TAR", "FUEL_LIQUID", "FUEL_LIQUID_HEAVY"
+            ],
+            "reaction_products": [
+                {
+                    "id": "SOAP_MAT",
+                    "mat_id": "MAKING_FUEL_SOAP_TALLOW"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "ASPHALT", "name": "asphalt",
+            "material_class": "SOIL",
+            "color": "BLACK",
+            "fallback_colors": [
+                "CHARCOAL", "DARK_GRAY"
+            ],
+            "value": 2,
+            "solid_density": 2400, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 920, "melting_point": 11000, "boiling_point": null, "ignite_point": 10800, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["slab", "slabs"],
+            "reaction_classes": [
+                "ASPHALT"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "PITCH", "name": "pitch",
+            "material_class": "STONE",
+            "color": "BLACK",
+            "fallback_colors": [
+                "CHARCOAL", "DARK_GRAY"
+            ],
+            "value": 4,
+            "solid_density": 1150, "liquid_density": 1100, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1200, "melting_point": 10162, "boiling_point": 10900, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "graphics": {
+                "boulder": "TINT:boulders_1_13"
+            },
+            "reaction_classes": [
+                "PITCH"
+            ],
+            "reaction_products": [
+                {
+                    "id": "SEAL_MAT",
+                    "mat_id": "MAKING_FUEL_PITCH"
+                }
+            ],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "STRAW", "name": "straw",
+            "material_class": "SOIL",
+            "color": "TAN",
+            "fallback_colors": [
+                "YELLOW", "BROWN"
+            ],
+            "value": 1,
+            "solid_density": 150, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 60001, "boiling_point": null, "ignite_point": 10388, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 5000, "COMPRESSIVE": 5000, "TENSILE": 5000, "TORSION": 5000, "SHEAR": 5000, "BENDING": 5000
+                },
+                "fracture": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["thatch", "thatches"],
+            "reaction_classes": [
+                "STRAW"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "STRAW_DRIED", "name": "dried straw",
+            "material_class": "SOIL",
+            "color": "TAN",
+            "fallback_colors": [
+                "YELLOW", "BROWN"
+            ],
+            "value": 1,
+            "solid_density": 200, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 60001, "boiling_point": null, "ignite_point": 10268, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 5000, "COMPRESSIVE": 5000, "TENSILE": 5000, "TORSION": 5000, "SHEAR": 5000, "BENDING": 5000
+                },
+                "fracture": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["thatch", "thatches"],
+            "reaction_classes": [
+                "STRAW_DRIED", "STRAW", "FUEL", "FUEL_BULK"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "TAR", "name": "tar",
+            "names": {
+                "liquid": "tar", "solid": "frozen tar", "gas": "boiling tar"
+            },
+            "material_class": "LIQUID",
+            "color": "BLACK",
+            "fallback_colors": [
+                "DARK_GRAY", "CHARCOAL"
+            ],
+            "value": 3,
+            "solid_density": 1100, "liquid_density": 1050, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1500, "melting_point": 9964, "boiling_point": 10720, "ignite_point": 10603, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "TAR", "TAR_ORGANIC", "FUEL_LIQUID", "FUEL_LIQUID_HEAVY"
+            ],
+            "reaction_products": [
+                {
+                    "id": "PITCH_MAT",
+                    "mat_id": "MAKING_FUEL_PITCH"
+                },
+                {
+                    "id": "SOAP_MAT",
+                    "mat_id": "MAKING_FUEL_SOAP_TAR"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "TAR_COAL", "name": "coal tar",
+            "names": {
+                "liquid": "coal tar", "solid": "frozen coal tar", "gas": "boiling coal tar"
+            },
+            "material_class": "LIQUID",
+            "color": "BLACK",
+            "fallback_colors": [
+                "DARK_GRAY", "CHARCOAL"
+            ],
+            "value": 3,
+            "solid_density": 1200, "liquid_density": 1200, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1250, "melting_point": 10000, "boiling_point": 10720, "ignite_point": 11044, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "TAR_COAL", "TAR", "TAR_INORGANIC", "FUEL_LIQUID", "FUEL_LIQUID_HEAVY"
+            ],
+            "reaction_products": [
+                {
+                    "id": "PITCH_MAT",
+                    "mat_id": "MKGFUEL_BITUMEN"
+                },
+                {
+                    "id": "SOAP_MAT",
+                    "mat_id": "MAKING_FUEL_SOAP_TAR"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "TURPENTINE", "name": "turpentine",
+            "names": {
+                "liquid": "turpentine", "solid": "frozen turpentine", "gas": "boiling turpentine"
+            },
+            "material_class": "LIQUID",
+            "color": "CLEAR",
+            "fallback_colors": [
+                "IVORY", "WHITE"
+            ],
+            "value": 2,
+            "solid_density": 900, "liquid_density": 865, "molar_mass": null,
+            "heat": {
+                "spec_heat": 4200, "melting_point": 9901, "boiling_point": 10277, "ignite_point": 10396, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "TURPENTINE", "FUEL_LIQUID", "FUEL_LIQUID_LIGHT"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "VINEGAR_WOOD", "name": "wood vinegar",
+            "names": {
+                "liquid": "wood vinegar", "solid": "frozen wood vinegar", "gas": "boiling wood vinegar"
+            },
+            "material_class": "LIQUID",
+            "color": "RUST",
+            "fallback_colors": [
+                "BROWN", "CINNAMON"
+            ],
+            "value": 2,
+            "solid_density": 900, "liquid_density": 900, "molar_mass": null,
+            "heat": {
+                "spec_heat": 4200, "melting_point": 9896, "boiling_point": 10180, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "VINEGAR_WOOD", "ACID", "VINEGAR"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "VINEGAR_PLANT", "name": "plant vinegar",
+            "names": {
+                "liquid": "plant vinegar", "solid": "frozen plant vinegar", "gas": "boiling plant vinegar"
+            },
+            "material_class": "LIQUID",
+            "color": "CINNAMON",
+            "fallback_colors": [
+                "RUST", "BROWN"
+            ],
+            "value": 2,
+            "solid_density": 900, "liquid_density": 900, "molar_mass": null,
+            "heat": {
+                "spec_heat": 4200, "melting_point": 9896, "boiling_point": 10180, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "VINEGAR_PLANT", "ACID", "VINEGAR"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "SULFURIC_ACID", "name": "sulfuric acid",
+            "names": {
+                "liquid": "sulfuric acid", "solid": "frozen sulfuric acid", "gas": "boiling sulfuric acid"
+            },
+            "material_class": "LIQUID",
+            "color": "CLEAR",
+            "fallback_colors": [
+                "IVORY", "WHITE"
+            ],
+            "value": 3,
+            "solid_density": 1800, "liquid_density": 1800, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1400, "melting_point": 9964, "boiling_point": 10800, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "SULFURIC_ACID", "ACID"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "SOAP_TAR", "name": "tar soap",
+            "material_class": "SOIL",
+            "color": "DARK_BROWN",
+            "fallback_colors": [
+                "BROWN", "CHARCOAL"
+            ],
+            "value": 3,
+            "solid_density": 500, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 10078, "boiling_point": null, "ignite_point": 10508, "heatdam_point": 10250, "colddam_point": 9900, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "SOAP_TAR", "SOAP"
+            ],
+            "reaction_products": [],
+            "material_flags": { "SOAP": true },
+            "soap_level": 2,
+            "inorganic_flags": {}
+        },
+        {
+            "key": "SOAP_TALLOW", "name": "tallow soap",
+            "material_class": "SOIL",
+            "color": "CREAM",
+            "fallback_colors": [
+                "IVORY", "FLAX"
+            ],
+            "value": 5,
+            "solid_density": 500, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 10078, "boiling_point": null, "ignite_point": 10508, "heatdam_point": 10250, "colddam_point": 9900, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "SOAP_TALLOW", "SOAP"
+            ],
+            "reaction_products": [],
+            "material_flags": { "SOAP": true },
+            "soap_level": 3,
+            "inorganic_flags": {}
+        },
+        {
+            "key": "PAPER_STRAW", "name": "straw paper",
+            "material_class": "SOIL",
+            "color": "TAN",
+            "fallback_colors": [
+                "CREAM", "YELLOW"
+            ],
+            "value": 1,
+            "solid_density": 300, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1300, "melting_point": 60001, "boiling_point": null, "ignite_point": 10508, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "PAPER_STRAW", "PAPER_SLURRY"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "PAPER_WOOD", "name": "wood pulp paper",
+            "material_class": "SOIL",
+            "color": "CREAM",
+            "fallback_colors": [
+                "IVORY", "TAN"
+            ],
+            "value": 1,
+            "solid_density": 300, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1300, "melting_point": 60001, "boiling_point": null, "ignite_point": 10508, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "PAPER_WOOD", "PAPER_SLURRY"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "PAPER_BARK", "name": "bark paper",
+            "material_class": "SOIL",
+            "color": "TAN",
+            "fallback_colors": [
+                "BROWN", "CREAM"
+            ],
+            "value": 2,
+            "solid_density": 300, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1300, "melting_point": 60001, "boiling_point": null, "ignite_point": 10508, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "PAPER_BARK", "PAPER_SLURRY"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "VARNISH", "name": "varnish",
+            "names": {
+                "liquid": "varnish", "solid": "hardened varnish", "gas": "varnish fumes"
+            },
+            "material_class": "LIQUID",
+            "color": "AMBER",
+            "fallback_colors": [
+                "GOLDENROD", "BROWN"
+            ],
+            "value": 6,
+            "solid_density": 1000, "liquid_density": 950, "molar_mass": null,
+            "heat": {
+                "spec_heat": 1700, "melting_point": 9964, "boiling_point": 10450, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "VARNISH"
+            ],
+            "reaction_products": [
+                {
+                    "id": "SEAL_MAT",
+                    "mat_id": "MAKING_FUEL_VARNISH"
+                }
+            ],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "PEAT_DRIED", "name": "dried peat",
+            "material_class": "SOIL",
+            "color": "BROWN",
+            "fallback_colors": [
+                "BURNT_UMBER", "CHOCOLATE"
+            ],
+            "value": 1,
+            "solid_density": 400, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 840, "melting_point": 60001, "boiling_point": null, "ignite_point": 10508, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["brick", "bricks"],
+            "graphics": {
+                "boulder": "TINT:coal"
+            },
+            "reaction_classes": [
+                "PEAT_DRIED", "FUEL", "FUEL_BULK"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "CREMATE_CITIZEN", "name": "citizen",
+            "material_class": "SOIL",
+            "color": "BLACK",
+            "fallback_colors": [
+                "DARK_GRAY", "CHARCOAL"
+            ],
+            "value": 1,
+            "solid_density": 500, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 60001, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "CREMATE_KEY", "CITIZEN"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "CREMATE_PET", "name": "pet",
+            "material_class": "SOIL",
+            "color": "BLACK",
+            "fallback_colors": [
+                "DARK_GRAY", "CHARCOAL"
+            ],
+            "value": 1,
+            "solid_density": 500, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 60001, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "CREMATE_KEY", "PET"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "ROT_KEY", "name": "rot",
+            "material_class": "SOIL",
+            "color": "BLACK",
+            "fallback_colors": [
+                "DARK_GRAY", "CHARCOAL"
+            ],
+            "value": 1,
+            "solid_density": 500, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 60001, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "ROT_KEY", "ROTTEN"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "DRAIN_KEY_MAT", "name": "drain",
+            "material_class": "SOIL",
+            "color": "AMBER",
+            "fallback_colors": [
+                "YELLOW", "SAFFRON"
+            ],
+            "value": 1,
+            "solid_density": 500, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 800, "melting_point": 60001, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "DRAIN_KEY", "DRAIN"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "SLAG", "name": "slag",
+            "material_class": "STONE",
+            "color": "SLATE_GRAY",
+            "fallback_colors": [
+                "BLACK", "ASH_GRAY"
+            ],
+            "value": 1,
+            "solid_density": 2900, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 840, "melting_point": 62000, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["block", "blocks"],
+            "reaction_classes": [
+                "SLAG", "AGGREGATE", "POZZOLAN"
+            ],
+            "reaction_products": [],
+            "material_flags": { "ITEMS_HARD": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "SCALE", "name": "scale",
+            "material_class": "STONE",
+            "color": "BLACK",
+            "fallback_colors": [
+                "DARK_GRAY", "RUST"
+            ],
+            "value": 1,
+            "solid_density": 5200, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 650, "melting_point": 62000, "boiling_point": null, "ignite_point": null, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": ["block", "blocks"],
+            "reaction_classes": [
+                "SCALE"
+            ],
+            "reaction_products": [],
+            "material_flags": { "ITEMS_HARD": true },
+            "inorganic_flags": {}
+        },
+        {
+            "key": "GALL", "name": "gall",
+            "material_class": "STONE",
+            "color": "WHITE",
+            "fallback_colors": [
+                "PALE_BLUE", "ASH_GRAY"
+            ],
+            "value": 1,
+            "solid_density": 2200, "liquid_density": null, "molar_mass": null,
+            "heat": {
+                "spec_heat": 840, "melting_point": null,
+                "boiling_point": null, "ignite_point": null,
+                "heatdam_point": null, "colddam_point": null,
+                "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000,
+                    "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000,
+                    "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null, "block_name": [
+                "crust", "crusts"
+            ],
+            "reaction_classes": [
+                "GALL", "ALKALI"
+            ],
+            "reaction_products": [],
+            "material_flags": {},
+            "inorganic_flags": {}
+        },
+        {
+            "key": "ETHANOL", "name": "ethanol",
+            "names": {
+                "liquid": "ethanol", "solid": "frozen ethanol", "gas": "ethanol vapor"
+            },
+            "material_class": "LIQUID",
+            "color": "CLEAR",
+            "fallback_colors": [
+                "WHITE", "IVORY"
+            ],
+            "value": 2,
+            "solid_density": 900, "liquid_density": 789, "molar_mass": null,
+            "heat": {
+                "spec_heat": 4200, "melting_point": 9794, "boiling_point": 10141, "ignite_point": 10653, "heatdam_point": null, "colddam_point": null, "mat_fixed_temp": null
+            },
+            "strength": {
+                "yield": {
+                    "IMPACT": 10000, "COMPRESSIVE": 10000, "TENSILE": 10000, "TORSION": 10000, "SHEAR": 10000, "BENDING": 10000
+                },
+                "fracture": {
+                    "IMPACT": 20000, "COMPRESSIVE": 20000, "TENSILE": 20000, "TORSION": 20000, "SHEAR": 20000, "BENDING": 20000
+                },
+                "strain_at_yield": null,
+                "max_edge": 0
+            },
+            "gem_names": null,
+            "reaction_classes": [
+                "ETHANOL", "FUEL_LIQUID", "FUEL_LIQUID_LIGHT"
+            ],
+            "reaction_products": [],
+            "material_flags": { "LIQUID_MISC": true },
+            "inorganic_flags": {}
+        }
+    ]
+}

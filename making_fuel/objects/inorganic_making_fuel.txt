@@ -1,0 +1,249 @@
+inorganic_making_fuel
+
+[OBJECT:INORGANIC]
+
+=================================================================
+MAKING FUEL: FUEL MINERALS
+=================================================================
+These live in raws rather than being injected because ENVIRONMENT
+tags are read during worldgen, when the stone layers are built.
+Nothing injected at runtime can place a mineral in the ground, so
+this is the one part of the module that cannot be injected.
+
+Everything else Making Fuel adds stays injected.
+
+-----------------------------------------------------------------
+IDS: THE MKGFUEL_ PREFIX
+-----------------------------------------------------------------
+Every inorganic this file ADDS carries MKGFUEL_, so it cannot
+collide with another raw mod's anthracite or bitumen: two mods
+declaring the same INORGANIC id leave only one of them standing.
+
+Not MAKING_FUEL_. That is the module's prefix, and RM's module
+engine removes every inorganic carrying it from memory at each data
+cycle, which is how injected materials leave before a save. A stone
+the world was built from must never be swept, so these carry a
+prefix RM does not look for.
+
+Reaction classes keep the plain name: ANTHRACITE, BITUMEN and the
+rest name the material indirectly, and another mod's material can
+join a chain by carrying one.
+
+PEAT keeps its vanilla id, because it replaces vanilla peat.
+
+-----------------------------------------------------------------
+HOW ENVIRONMENT TAGS WORK
+-----------------------------------------------------------------
+ENVIRONMENT:<rock class>:<inclusion>:<probability>
+    Places the mineral in a whole class of stone.
+    Rock classes: SEDIMENTARY, IGNEOUS_EXTRUSIVE, IGNEOUS_INTRUSIVE,
+                  METAMORPHIC, SOIL, SOIL_OCEAN, SOIL_SAND,
+                  ALLUVIAL, ALL_STONE
+
+ENVIRONMENT_SPEC:<specific stone>:<inclusion>:<probability>
+    Places it inside one named stone only. Vanilla graphite uses
+    four of these to sit in gneiss, quartzite, marble and schist.
+
+Inclusion types:
+    VEIN            long snaking seams. Vanilla lignite uses this.
+    CLUSTER         irregular blobs, the largest deposits.
+    CLUSTER_SMALL   3 to 6 tiles.
+    CLUSTER_ONE     a single tile. Use for rare, valuable things.
+
+Probability is 1 to 100 and is relative, not absolute. It weights
+this mineral against every other mineral competing for the same
+placement, so 100 does not mean "always".
+=================================================================
+
+=================================================================
+PEAT
+Trying to cut vanilla peat soil and make it spawn in a way that 
+allows it to actually spawn useable peat.
+=================================================================
+[CUT_INORGANIC:PEAT]
+
+Vanilla peat is a SOIL layer, so it never yields a boulder. This
+version drops SOIL, adds IS_STONE, and places itself as an
+inclusion inside soil layers instead, which is what makes it
+diggable into usable peat.
+
+SOIL_TEMPLATE gives IGNITE_POINT NONE and MELTING_POINT 11500.
+DF calls a material fire safe when nothing destructive happens to
+it below 11000 U, so peat inherited fire safety and became legal
+furnace material. The ignite point below is what removes it.
+
+[INORGANIC:PEAT]
+[USE_MATERIAL_TEMPLATE:SOIL_TEMPLATE]
+[STATE_NAME_ADJ:ALL_SOLID:peat][DISPLAY_COLOR:0:6:1][TILE:176]
+[ITEM_SYMBOL:'*']
+
+placement
+[ENVIRONMENT:SOIL:VEIN:80]
+[ENVIRONMENT:SOIL:CLUSTER:80]
+
+identity. One class, the inorganic id, per Supply Chain Classes 0.4.
+What peat distils into is the retort reaction's business, not a
+tag: the old SOURCE_ classes said "becomes" in the "is" slot, and
+nothing ever read them. The ghost classifies peat off this same
+identity class.
+[IS_STONE]
+[AQUIFER]
+[REACTION_CLASS:PEAT]
+[MATERIAL_VALUE:1]
+
+thermal. 10450 U is 250 C, the smouldering point of dry peat, and
+sits under the 11000 U fire safe line. Wood is 10508, so peat
+catches slightly more readily than wood, which is correct. Peat
+chars rather than melts, so both phase change points are NONE.
+[SPEC_HEAT:1900]  organic solid, well above the 409 of coal
+[IGNITE_POINT:10450]
+[MELTING_POINT:NONE]
+[BOILING_POINT:NONE]
+
+physical. Peat is weaker than wood in every direction. These only
+matter if something gets made out of it. MAX_EDGE 0 from the
+template already blocks edged weapons.
+[SOLID_DENSITY:850]  vanilla figure, assumes water still in it
+[IMPACT_YIELD:3000]
+[IMPACT_FRACTURE:3000]
+[COMPRESSIVE_YIELD:3000]
+[COMPRESSIVE_FRACTURE:3000]
+[TENSILE_YIELD:600]
+[TENSILE_FRACTURE:600]
+[TORSION_YIELD:600]
+[TORSION_FRACTURE:600]
+[SHEAR_YIELD:600]
+[SHEAR_FRACTURE:600]
+[BENDING_YIELD:600]
+[BENDING_FRACTURE:600]
+[ABSORPTION:500]  sphagnum peat holds many times its own weight
+
+[STATE_COLOR:ALL_SOLID:MAROON]
+
+
+=================================================================
+OIL SHALE
+Kerogen bearing marl. Will not burn usefully as mined; it has to
+be retorted, which is the entire point. Common, low value, and
+the answer to a fort with no trees and no coal seam.
+=================================================================
+[INORGANIC:MKGFUEL_SHALE_OIL]
+[USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]
+[STATE_NAME_ADJ:ALL_SOLID:oil shale][DISPLAY_COLOR:6:0:1][TILE:'*']
+[REACTION_CLASS:SHALE_OIL]
+[ENVIRONMENT_SPEC:SHALE:CLUSTER:100]
+[ENVIRONMENT_SPEC:MUDSTONE:CLUSTER:80]
+[ENVIRONMENT_SPEC:SILTSTONE:CLUSTER:60]
+[ENVIRONMENT:SEDIMENTARY:VEIN:40]
+[SPEC_HEAT:800]
+[IGNITE_POINT:11800]
+[MELTING_POINT:NONE]
+[BOILING_POINT:NONE]
+[SOLID_DENSITY:2200]  mostly rock; the oil fraction is small
+[MATERIAL_VALUE:1]
+[IS_STONE]
+[STATE_COLOR:ALL_SOLID:DARK_BROWN]
+
+=================================================================
+ANTHRACITE
+The coal that does not need you. Bituminous is metamorphosed
+lignite; anthracite is metamorphosed bituminous, driven so far
+that almost nothing volatile is left. That single fact decides
+everything about how it behaves here.
+
+It will NOT COKE. Coking works because volatile matter softens
+the coal and fuses it into a cake, and anthracite has too little
+left to soften. Historically this is exactly why anthracite was
+burned raw in stoves and blast furnaces while bituminous went to
+the coke oven first. So the retort pays it almost no liquid and
+nearly all solid, which is the inverse of lignite.
+
+METAMORPHIC, not sedimentary. Both vanilla coals sit in
+sedimentary veins; anthracite forms where sedimentary coal has
+been cooked by pressure, so it belongs in the metamorphic layers
+and nowhere else. That also keeps it off the same embarks as the
+other two more often than not.
+=================================================================
+[INORGANIC:MKGFUEL_ANTHRACITE]
+[USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]
+[STATE_NAME_ADJ:ALL_SOLID:anthracite][DISPLAY_COLOR:0:7:1][TILE:15]
+[REACTION_CLASS:ANTHRACITE]
+[ENVIRONMENT:METAMORPHIC:VEIN:60]
+[ITEM_SYMBOL:15]
+[SPEC_HEAT:409]
+[IGNITE_POINT:12200]
+[MELTING_POINT:NONE]
+[BOILING_POINT:16708]
+[SOLID_DENSITY:1500]  hardest and densest of the three ranks
+[IS_STONE]
+[STATE_COLOR:ALL_SOLID:BLACK]
+
+=================================================================
+BITUMEN
+Natural solid bitumen, the gilsonite of the real world. Fills
+fractures in oil bearing sediment. Yields pitch directly with no
+distilation, which makes it the shortcut into the binder economy
+for a fort that finds it.
+=================================================================
+[INORGANIC:MKGFUEL_BITUMEN]
+[USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]
+[STATE_NAME_ADJ:ALL_SOLID:bitumen][DISPLAY_COLOR:0:7:1][TILE:'%']
+Two tags do the work. BITUMEN is identity, and it is the class
+the three bitumen bound briquette presses ask for as binder, so
+bitumen drops straight into the binder economy with no new
+reaction written. PITCH was removed: the presses name BITUMEN
+directly now, so carrying the pitch family here bought nothing.
+SEAL_MAT points at itself, since the seal and coat reactions ask
+for the product code and a jug seal made of bitumen is bitumen.
+[REACTION_CLASS:BITUMEN]
+[MATERIAL_REACTION_PRODUCT:SEAL_MAT:INORGANIC:MKGFUEL_BITUMEN]
+natural bitumen fills fractures, so veins rather than clusters
+[ENVIRONMENT_SPEC:SHALE:VEIN:60]
+[ENVIRONMENT_SPEC:LIMESTONE:VEIN:40]
+[ENVIRONMENT_SPEC:SANDSTONE:VEIN:40]
+[ENVIRONMENT:SEDIMENTARY:CLUSTER_SMALL:20]
+[SPEC_HEAT:1200]
+[IGNITE_POINT:10800]
+[MELTING_POINT:10250]  softens around 120C, so it will not melt in a fort
+[BOILING_POINT:NONE]
+[SOLID_DENSITY:1100]
+[MATERIAL_VALUE:4]
+[IS_STONE]
+[STATE_COLOR:ALL_SOLID:BLACK]
+
+=================================================================
+TAR SAND
+Bituminous sand. A sand soil layer, not a mineral inclusion, so it
+is gathered with the native Collect Sand job rather than mined.
+The collected bag is the wash reagent: washing separates bitumen
+from ordinary sand, giving two useful outputs from one gather.
+
+SOIL_SAND is the flag the Collect Sand job reads, and it only
+works on a layer material. That is why this entry uses
+SOIL_TEMPLATE and carries no ENVIRONMENT tags at all. Layer
+placement is assigned by biome, not by inclusion rules.
+
+Peat goes the opposite way for the opposite reason. There is no
+collect job for peat, so peat had to stop being a layer and
+become a diggable inclusion. Sand already has a collect job, so
+tar sand stays a layer.
+
+AQUIFER is deliberately absent. Every vanilla sand carries it,
+but bitumen cemented sand is not permeable, and an aquifer layer
+is miserable to dig through.
+=================================================================
+[INORGANIC:MKGFUEL_SAND_TAR]
+[USE_MATERIAL_TEMPLATE:SOIL_TEMPLATE]
+[STATE_NAME_ADJ:ALL_SOLID:tar sand][DISPLAY_COLOR:0:6:1][TILE:176]
+[SOIL][SOIL_SAND]
+classes. No PITCH or BINDER here. The bitumen is locked in the
+sand until washing frees it, so the binder classes belong to the
+wash product, not to the raw gather.
+[REACTION_CLASS:SAND_TAR]
+[SPEC_HEAT:900]
+[IGNITE_POINT:11200]
+[MELTING_POINT:NONE]
+[BOILING_POINT:NONE]
+[SOLID_DENSITY:2000]
+[MATERIAL_VALUE:1]
+[STATE_COLOR:ALL_SOLID:DARK_BROWN]

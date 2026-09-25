@@ -1,0 +1,25 @@
+TODO
+
+
+BIG THINGS
+- Systems might need to be migrated and integrated with RM before release
+- Some systems may need to migrate to their own modules before release
+- RM core adopts dust tool and dust byproducts
+
+OTHER THINGS
+* processing content development
+- bone marrow and bone meal
+- plastic
+- ammonia liquor
+- crude oil from tar sand
+* tar sand needs to be adaptive
+
+BUG THINGS
+- None
+
+
+DEFERRED OR UNIMPORTANT
+- (low priority) required vessels: if fort doesn't have liquid_container, check for buckets, if no buckets, check for barrels, etc. reactions should only fail if there are actually no available liquid containers, not just has_tool_use ones. 
+- (low priority) no hardcoded retort containers, all adaptive. no containers = all bank
+- BUG (DEFERRED, UNIMPORTANT EDGE CASE) Make charcoal from raw fish was sputtering on rotten raw mussels, a stack of 3. These mussels were seen dropped at the wood furnace while "Job item lost" messages were coming up previously.
+- BUG: black bronze is missing from the forge menu. collision due to our own refinished bronze in black colour and new dupe prevention systems? CHECKED OUT: black bronze is not appearing in weapons/armor @ forge even in vanilla but appears in other objects @ forge, so this issue probably isn't ours. deferred.

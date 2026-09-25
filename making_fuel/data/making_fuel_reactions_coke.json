@@ -1,0 +1,49 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_", "name": "Making Fuel", "version": "1.0"
+  },
+  "categories": [
+    {
+      "key": "COKE", "name": "Make coke", "parent": ""
+    }
+  ],
+  "reactions": [
+    {
+      "key": "COKE_PITCH_COAL", "name": "make coke from coal pitch", "category": "MAKING_FUEL_CAT_COKE",
+      "building": "SMELTER", "skill": "SMELT", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "pitch", "type": "BOULDER_ANY", "quantity": 3,
+          "mat_id": "MKGFUEL_BITUMEN"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:COKE", "count": 4, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "COKE_GREEN_COKE", "name": "make coke from green coke", "category": "MAKING_FUEL_CAT_COKE",
+      "description": "One green coke makes four coke.",
+      "building": "SMELTER", "skill": "SMELT", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "green_coke", "type": "BAR_ANY", "quantity": 150,
+          "reaction_class": "GREEN_COKE"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:COKE", "count": 4, "dimension": 150
+        }
+      ]
+    }
+  ]
+}

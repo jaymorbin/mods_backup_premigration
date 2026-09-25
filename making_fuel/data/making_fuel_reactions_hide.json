@@ -1,0 +1,51 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_",
+    "name": "Making Fuel",
+    "version": "1.0"
+  },
+  "categories": [
+    {
+      "key": "HIDE", "name": "Work hides", "parent": ""
+    }
+  ],
+  "reactions": [
+    {
+      "key": "COMBINE_PARTIAL_SKIN", "name": "combine partial skins", "category": "MAKING_FUEL_CAT_HIDE",
+      "building": "TANNER", "skill": "TANNER", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "partial_a", "type": "GLOB", "reaction_class": "PARTIAL_SKIN", "quantity": 1, "flags": { "unrotten": true }
+        },
+        {
+          "code": "partial_b", "type": "GLOB", "reaction_class": "PARTIAL_SKIN", "quantity": 1, "flags": { "unrotten": true }
+        }
+      ],
+      "products": [
+        {
+          "type": "GLOB", "get_material_same": "partial_a", "count": 0, "probability": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PROCESS_SKIN", "name": "process skin into rawhide", "category": "MAKING_FUEL_CAT_HIDE",
+      "building": "TANNER", "skill": "TANNER", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "skin", "type": "GLOB", "reaction_class": "SKIN", "quantity": 150, "flags": { "unrotten": true }
+        }
+      ],
+      "products": [
+        {
+          "type": "GLOB", "get_material_same": "skin", "count": 0, "probability": 0, "dimension": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1194 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_", "name": "Making Fuel", "version": "1.0"
+  },
+  "categories": [
+    {
+      "key": "SPLIT", "name": "Split kindling", "parent": ""
+    },
+    {
+      "key": "SPLIT_FURNITURE", "name": "Split kindling from furniture", "parent": "SPLIT"
+    },
+    {
+      "key": "SPLIT_FINISHED_GOODS", "name": "Split kindling from finished goods", "parent": "SPLIT"
+    },
+    {
+      "key": "SPLIT_CONTAINERS", "name": "Split kindling from containers", "parent": "SPLIT"
+    },
+    {
+      "key": "SPLIT_ARMS", "name": "Split kindling from arms and armour", "parent": "SPLIT"
+    }
+  ],
+  "reactions": [
+    {
+      "key": "SPLIT_LOG", "name": "split kindling from logs", "category": "MAKING_FUEL_CAT_SPLIT",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "log", "type": "WOOD", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "log"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_BRANCHES", "name": "split kindling from branches", "category": "MAKING_FUEL_CAT_SPLIT",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "branch", "type": "TOOL", "tool_id": "MAKING_FUEL_BRANCH", "quantity": 2
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "branch"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_WEAPON", "name": "split kindling from weapons", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "weapon", "type": "WEAPON", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "weapon"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_AMMO", "name": "split kindling from ammunition", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "ammunition", "type": "AMMO", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "ammunition"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_ARMOR", "name": "split kindling from armour", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "armour", "type": "ARMOR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "armour"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HANDWEAR", "name": "split kindling from handwear", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "handwear", "type": "HANDWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "handwear"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HEADWEAR", "name": "split kindling from headwear", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "headwear", "type": "HEADWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "headwear"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_LEGWEAR", "name": "split kindling from legwear", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "legwear", "type": "LEGWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "legwear"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_QUIVER", "name": "split kindling from quivers", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "quiver", "type": "QUIVER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "quiver"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_SHIELD_ANY", "name": "split kindling from shields", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "shield", "type": "SHIELD_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "shield"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_FOOTWEAR", "name": "split kindling from footwear", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "footwear", "type": "FOOTWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "footwear"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_FURNITURE", "name": "split kindling from furniture", "category": "MAKING_FUEL_CAT_SPLIT_FURNITURE",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Any wooden furnishing qualifies, containers only when empty, bins included.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "furniture", "type": "ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "furniture": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "furniture"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_ARMORSTAND", "name": "split kindling from armorstands", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "armorstand", "type": "ARMORSTAND", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "armorstand"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_BARREL", "name": "split kindling from barrels", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "barrel", "type": "BARREL", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "barrel"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_BED", "name": "split kindling from beds", "category": "MAKING_FUEL_CAT_SPLIT_FURNITURE",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bed", "type": "BED", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "bed"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_BIN", "name": "split kindling from bins", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bin", "type": "BIN", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "bin"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_BUCKET", "name": "split kindling from buckets", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bucket", "type": "BUCKET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "bucket"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_CABINET", "name": "split kindling from cabinets", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cabinet", "type": "CABINET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "cabinet"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_CAGE", "name": "split kindling from cages", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cage", "type": "CAGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "cage"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_CHAIR", "name": "split kindling from chairs", "category": "MAKING_FUEL_CAT_SPLIT_FURNITURE",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "chair", "type": "CHAIR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "chair"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_COFFIN", "name": "split kindling from caskets", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "casket", "type": "COFFIN", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "casket"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_BOX", "name": "split kindling from chests", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "chest", "type": "BOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "chest"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_DOOR", "name": "split kindling from doors", "category": "MAKING_FUEL_CAT_SPLIT_FURNITURE",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "door", "type": "DOOR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "door"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_FLOODGATE", "name": "split kindling from floodgates", "category": "MAKING_FUEL_CAT_SPLIT_FURNITURE",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "floodgate", "type": "FLOODGATE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "floodgate"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_GOBLET", "name": "split kindling from cups", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cup", "type": "GOBLET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "cup"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_GRATE", "name": "split kindling from grates", "category": "MAKING_FUEL_CAT_SPLIT_FURNITURE",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "grate", "type": "GRATE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "grate"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HATCH", "name": "split kindling from hatches", "category": "MAKING_FUEL_CAT_SPLIT_FURNITURE",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hatch", "type": "HATCH_COVER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "hatch"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_JUG", "name": "split kindling from jugs", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "jug", "type": "JUG", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "jug"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_LIQUID_CONTAINER", "name": "split kindling from liquid containers", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "liquid_container", "type": "HAS_LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "liquid_container"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_FOOD_STORAGE", "name": "split kindling from food containers", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "food_container", "type": "HAS_FOOD_STORAGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "food_container"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_HIVE", "name": "split kindling from hives", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hive", "type": "HAS_HIVE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "hive"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_NEST_BOX", "name": "split kindling from nest boxes", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "nest_box", "type": "HAS_NEST_BOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "nest_box"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_TABLE", "name": "split kindling from tables", "category": "MAKING_FUEL_CAT_SPLIT_FURNITURE",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "table", "type": "TABLE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "table"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_TRACK_CART", "name": "split kindling from minecarts", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "minecart", "type": "HAS_TRACK_CART", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "minecart"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_HEAVY_OBJECT_HAULING", "name": "split kindling from wheelbarrows", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "wheelbarrow", "type": "HAS_HEAVY_OBJECT_HAULING", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "wheelbarrow"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_STAND_AND_WORK_ABOVE", "name": "split kindling from stepladders", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "stepladder", "type": "HAS_STAND_AND_WORK_ABOVE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "stepladder"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_ROLL_UP_SHEET", "name": "split kindling from scroll rollers", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "scroll_roller", "type": "HAS_ROLL_UP_SHEET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "scroll_roller"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_PROTECT_FOLDED_SHEETS", "name": "split kindling from book bindings", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "book_binding", "type": "HAS_PROTECT_FOLDED_SHEETS", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "book_binding"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_BOOKCASE", "name": "split kindling from bookcases", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bookcase", "type": "HAS_BOOKCASE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "bookcase"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_DISPLAY_OBJECT", "name": "split kindling from pedestals and display cases", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "display", "type": "HAS_DISPLAY_OBJECT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "display"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_GAMES_OF_CHANCE", "name": "split kindling from dice", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "die", "type": "HAS_GAMES_OF_CHANCE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "die"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_HAS_DIVINATION", "name": "split kindling from divination dice", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "divination_die", "type": "HAS_DIVINATION", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "divination_die"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_INSTRUMENT", "name": "split kindling from instruments", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "instrument", "type": "INSTRUMENT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "instrument"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_WEAPONRACK", "name": "split kindling from weaponracks", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "weaponrack", "type": "WEAPONRACK", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "weaponrack"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_ANIMALTRAP", "name": "split kindling from animal traps", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank. Only empty ones are taken; anything holding cargo is left where it stands.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "animaltrap", "type": "ANIMALTRAP", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "animaltrap"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_BLOCKS", "name": "split kindling from blocks", "category": "MAKING_FUEL_CAT_SPLIT_CONTAINERS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "blocks", "type": "BLOCKS_ANY", "quantity": 4,
+          "flags": {
+            "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "blocks"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_ENORMOUSCORKSCREW", "name": "split kindling from enormous corkscrews", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "corkscrew", "type": "ENORMOUSCORKSCREW", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "corkscrew"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_SPIKEDBALL", "name": "split kindling from spiked balls", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "spiked_ball", "type": "SPIKEDBALL", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "spiked_ball"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_MENACINGSPIKE", "name": "split kindling from menacing spikes", "category": "MAKING_FUEL_CAT_SPLIT_ARMS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "menacing_spikes", "type": "MENACINGSPIKE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "menacing_spikes"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_TOY", "name": "split kindling from toys", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy", "type": "TOY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "toy"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_TOY_PUZZLEBOX", "name": "split kindling from puzzleboxes", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "puzzlebox", "type": "TOY_PUZZLEBOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "puzzlebox"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_TOY_BOAT", "name": "split kindling from toy boats", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_boat", "type": "TOY_BOAT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "toy_boat"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_TOY_HAMMER", "name": "split kindling from toy hammers", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_hammer", "type": "TOY_HAMMER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "toy_hammer"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_TOY_AXE", "name": "split kindling from toy axes", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_axe", "type": "TOY_AXE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "toy_axe"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_TOY_MINIFORGE", "name": "split kindling from toy mini-forges", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "miniforge", "type": "TOY_MINIFORGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "miniforge"
+        }
+      ]
+    },
+    {
+      "key": "SPLIT_CRAFTS", "name": "split kindling from crafts", "category": "MAKING_FUEL_CAT_SPLIT_FINISHED_GOODS",
+      "description": "Kindling retains the wood material it was split from; yield follows size, and remainders bank.",
+      "building": "WOOD_FURNACE", "skill": "WOOD_BURNING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "craft", "type": "CRAFT_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_KINDLING", "count": 0, "get_material_same": "craft"
+        }
+      ]
+    }
+  ]
+}

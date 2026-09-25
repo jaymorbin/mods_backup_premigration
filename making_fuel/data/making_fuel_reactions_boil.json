@@ -1,0 +1,178 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_", "name": "Making Fuel", "version": "1.0"
+  },
+  "categories": [
+    {
+      "key": "BOIL", "name": "Boil chemicals", "parent": ""
+    }
+  ],
+  "reactions": [
+    {
+      "key": "BOIL_TAR", "name": "boil pitch from tar", "category": "MAKING_FUEL_CAT_BOIL",
+      "description": "The vessel is returned; only its contents are spent.",
+      "building": "KITCHEN", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tar", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "TAR_ORGANIC",
+          "has_material_reaction_product": "PITCH_MAT",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "tar",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BOULDER", "count": 0, "dimension": 150,
+          "get_material_product": {
+            "reagent_code": "tar", "product_code": "PITCH_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "BOIL_TAR_COAL", "name": "boil bitumen from coal tar", "category": "MAKING_FUEL_CAT_BOIL",
+      "description": "Yield follows the size and material of what goes in; remainders bank. The vessel is returned; only its contents are spent.",
+      "building": "KITCHEN", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tar", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "TAR_INORGANIC",
+          "has_material_reaction_product": "PITCH_MAT",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "tar",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BOULDER", "count": 0, "dimension": 150,
+          "get_material_product": {
+            "reagent_code": "tar", "product_code": "PITCH_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "BOIL_SAND_TAR", "name": "boil bitumen from tar sand", "category": "MAKING_FUEL_CAT_BOIL",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "KITCHEN", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tar_sand", "type": "POWDER_ANY", "quantity": 150,
+          "reaction_class": "SAND_TAR",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "sand_bag", "type": "BAG", "quantity": 1,
+          "contains": "tar_sand",
+          "flags": {
+            "preserve": true
+          }
+        },
+        {
+          "code": "water", "type": "WATER", "quantity": 150,
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "water_container", "type": "ANY", "quantity": 1,
+          "contains": "water",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BOULDER", "mat_id": "MKGFUEL_BITUMEN", "count": 1, "dimension": 150
+        },
+        {
+          "type": "POWDER_MISC", "mat_id": "SAND_TAN", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "BOIL_LEATHER", "name": "boil glue from leather", "category": "MAKING_FUEL_CAT_BOIL",
+      "building": "KITCHEN", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hide", "type": "SKIN_TANNED", "quantity": 1
+        },
+        {
+          "code": "vessel", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_GLUE", "to_container": "vessel", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "BOIL_BONE", "name": "boil glue from bones", "category": "MAKING_FUEL_CAT_BOIL",
+      "building": "KITCHEN", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bone", "type": "BODY_PART", "quantity": 1,
+          "flags": {
+            "body_part": true, "bone": true
+          }
+        },
+        {
+          "code": "vessel", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_GLUE", "to_container": "vessel", "count": 1, "dimension": 150
+        }
+      ]
+    }
+  ]
+}

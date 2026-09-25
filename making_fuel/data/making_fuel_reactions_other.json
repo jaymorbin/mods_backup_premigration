@@ -1,0 +1,1280 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_", "name": "Making Fuel", "version": "1.0"
+  },
+  "categories": [],
+  "reactions": [
+    {
+      "key": "PRESS_BRIQUETTE_COKE", "name": "press coke briquettes",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "breeze", "type": "BAR_ANY", "quantity": 450,
+          "reaction_class": "BREEZE_COKE"
+        },
+        {
+          "code": "pitch", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "BITUMEN"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_COKE",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_BRIQUETTE_CHARCOAL", "name": "press charcoal briquettes",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cinders", "type": "BAR_ANY", "quantity": 450,
+          "reaction_class": "CINDER"
+        },
+        {
+          "code": "pitch", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "BITUMEN"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_CHARCOAL",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_BRIQUETTE_COAL", "name": "press coal briquettes",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "fine_coals", "type": "BAR_ANY", "quantity": 450,
+          "reaction_class": "FINE_COAL"
+        },
+        {
+          "code": "pitch", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "BITUMEN"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_COAL",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_BRIQUETTE_COKE_CLAY", "name": "press coke briquettes with clay",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "breeze", "type": "BAR_ANY", "quantity": 600,
+          "reaction_class": "BREEZE_COKE"
+        },
+        {
+          "code": "clay", "type": "BOULDER_ANY", "quantity": 1,
+          "has_material_reaction_product": "FIRED_MAT"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_COKE",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_BRIQUETTE_CHARCOAL_CLAY", "name": "press charcoal briquettes with clay",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cinders", "type": "BAR_ANY", "quantity": 600,
+          "reaction_class": "CINDER"
+        },
+        {
+          "code": "clay", "type": "BOULDER_ANY", "quantity": 1,
+          "has_material_reaction_product": "FIRED_MAT"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_CHARCOAL",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_BRIQUETTE_COAL_CLAY", "name": "press coal briquettes with clay",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "fine_coals", "type": "BAR_ANY", "quantity": 600,
+          "reaction_class": "FINE_COAL"
+        },
+        {
+          "code": "clay", "type": "BOULDER_ANY", "quantity": 1,
+          "has_material_reaction_product": "FIRED_MAT"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_COAL",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_BRIQUETTE_COKE_GLUE", "name": "press coke briquettes with glue",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "breeze", "type": "BAR_ANY", "quantity": 600,
+          "reaction_class": "BREEZE_COKE"
+        },
+        {
+          "code": "glue", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "GLUE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "glue",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_COKE",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_BRIQUETTE_CHARCOAL_GLUE", "name": "press charcoal briquettes with glue",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cinders", "type": "BAR_ANY", "quantity": 600,
+          "reaction_class": "CINDER"
+        },
+        {
+          "code": "glue", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "GLUE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "glue",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_CHARCOAL",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_BRIQUETTE_COAL_GLUE", "name": "press coal briquettes with glue",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "fine_coals", "type": "BAR_ANY", "quantity": 600,
+          "reaction_class": "FINE_COAL"
+        },
+        {
+          "code": "glue", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "GLUE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "glue",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BRIQUETTE_COAL",
+          "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PRESS_SAWDUST", "name": "press sawdust into wooden blocks",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "sawdust", "type": "TOOL", "tool_id": "MAKING_FUEL_SAWDUST", "quantity": 2
+        }
+      ],
+      "products": [
+        {
+          "type": "BLOCKS", "count": 1, "get_material_same": "sawdust"
+        }
+      ]
+    },
+    {
+      "key": "PRESS_TINDER", "name": "press tinder from sawdust",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "sawdust", "type": "TOOL", "tool_id": "MAKING_FUEL_SAWDUST", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_TINDER", "count": 1, "get_material_same": "sawdust"
+        }
+      ]
+    },
+    {
+      "key": "PRESS_TINDER_BARK", "name": "press tinder from bark",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bark", "type": "TOOL", "tool_id": "MAKING_FUEL_BARK", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_TINDER", "count": 1, "get_material_same": "bark"
+        }
+      ]
+    },
+    {
+      "key": "PRESS_GLUE_BRIQUETTES", "name": "press briquettes with glue binder",
+      "building": "SCREW_PRESS", "skill": "PRESSING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "coke", "type": "BAR_ANY", "quantity": 300, "reaction_class": "COKE"
+        },
+        {
+          "code": "glue", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "GLUE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "glue",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR_COAL", "mat_id": "COAL", "count": 2, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "GRIND_BREEZE_COKE", "name": "grind coke into breeze",
+      "description": "One coke makes three coke breeze.",
+      "building": "MILL", "skill": "MILLING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "coke", "type": "BAR_ANY", "quantity": 150,
+          "reaction_class": "COKE"
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BREEZE_COKE", "count": 3, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "MAKE_SMALL_BOTTLE", "name": "make small bottle",
+      "building": "KILN", "skill": "POTTERY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "clay", "type": "BOULDER_ANY", "quantity": 1,
+          "has_material_reaction_product": "FIRED_MAT"
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_SMALL_BOTTLE", "count": 3,
+          "get_material_product": {
+            "reagent_code": "clay", "product_code": "FIRED_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "MAKE_LARGE_BOTTLE", "name": "make large bottle",
+      "building": "KILN", "skill": "POTTERY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "clay", "type": "BOULDER_ANY", "quantity": 1,
+          "has_material_reaction_product": "FIRED_MAT"
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_LARGE_BOTTLE", "count": 1,
+          "get_material_product": {
+            "reagent_code": "clay", "product_code": "FIRED_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "MAKE_SMALL_CASK", "name": "make small cask",
+      "building": "KILN", "skill": "POTTERY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "clay", "type": "BOULDER_ANY", "quantity": 2,
+          "has_material_reaction_product": "FIRED_MAT"
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_SMALL_CASK", "count": 1,
+          "get_material_product": {
+            "reagent_code": "clay", "product_code": "FIRED_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "MAKE_LARGE_CASK", "name": "make large cask",
+      "building": "KILN", "skill": "POTTERY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "clay", "type": "BOULDER_ANY", "quantity": 3,
+          "has_material_reaction_product": "FIRED_MAT"
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_LARGE_CASK", "count": 1,
+          "get_material_product": {
+            "reagent_code": "clay", "product_code": "FIRED_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "MAKE_VAT", "name": "make vat",
+      "building": "KILN", "skill": "POTTERY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "clay", "type": "BOULDER_ANY", "quantity": 4,
+          "has_material_reaction_product": "FIRED_MAT"
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_VAT", "count": 1,
+          "get_material_product": {
+            "reagent_code": "clay", "product_code": "FIRED_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "MAKE_VERDIGRIS", "name": "make verdigris dye", "category": "MAKE_DYE",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "DYER", "skill": "PROCESSPLANTS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "copper", "type": "BAR", "quantity": 150, "mat_id": "COPPER"
+        },
+        {
+          "code": "vinegar", "type": "LIQUID_INORGANIC_ANY", "quantity": 150, "reaction_class": "VINEGAR",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "vinegar_container", "type": "ANY", "quantity": 1, "contains": "vinegar",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "POWDER_MISC", "mat_token": "PLANT_MAT:MAKING_FUEL_DYE_HOST:DYE_VERDIGRIS", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "MAKE_IRON_BLACK", "name": "make iron black dye", "category": "MAKE_DYE",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled. Durable inputs are returned unspent.",
+      "building": "DYER", "skill": "PROCESSPLANTS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "iron", "type": "BAR", "quantity": 150, "mat_id": "IRON",
+          "flags": {
+            "preserve": true
+          }
+        },
+        {
+          "code": "vinegar", "type": "LIQUID_INORGANIC_ANY", "quantity": 150, "reaction_class": "VINEGAR",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "vinegar_container", "type": "ANY", "quantity": 1, "contains": "vinegar",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "POWDER_MISC", "mat_token": "PLANT_MAT:MAKING_FUEL_DYE_HOST:DYE_IRON_BLACK", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "SEAL_VESSEL_PITCH", "name": "seal a vessel with pitch",
+      "description": "The item is preserved; it comes back treated. Borrowed vessels come back filled.",
+      "building": "KILN", "skill": "POTTERY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "pitch", "type": "BOULDER_ANY", "quantity": 1,
+          "has_material_reaction_product": "SEAL_MAT"
+        },
+        {
+          "code": "vessel", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true, "unimproved": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "IMPROVEMENT", "improvement_type": "GLAZED", "target_reagent": "vessel",
+          "get_material_product": {
+            "reagent_code": "pitch", "product_code": "SEAL_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "TREAT_WOOD_CREOSOTE", "name": "treat wood with creosote",
+      "description": "The item is preserved; it comes back treated. The vessel is returned; only its contents are spent.",
+      "building": "CRAFTSMAN", "skill": "WOODCRAFT", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "creosote", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "CREOSOTE",
+          "has_material_reaction_product": "SEAL_MAT",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "creosote",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "item", "type": "ANY", "quantity": 1,
+          "flags": {
+            "improvable": true, "wood": true, "preserve": true, "unimproved": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "IMPROVEMENT", "improvement_type": "COVERED", "target_reagent": "item",
+          "get_material_product": {
+            "reagent_code": "creosote", "product_code": "SEAL_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "BURN_CARBON_BLACK", "name": "make carbon black dye", "category": "MAKE_DYE",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "DYER", "skill": "PROCESSPLANTS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tar", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "TAR",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1, "contains": "tar",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "POWDER_MISC", "mat_token": "PLANT_MAT:MAKING_FUEL_DYE_HOST:CARBON_BLACK", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DYE_MAUVE", "name": "make mauve dye", "category": "MAKE_DYE",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "DYER", "skill": "PROCESSPLANTS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "aniline", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "ANILINE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "aniline_container", "type": "ANY", "quantity": 1,
+          "contains": "aniline",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "alkali", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "ALKALI",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "alkali_container", "type": "ANY", "quantity": 1,
+          "contains": "alkali",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "POWDER_MISC", "mat_token": "PLANT_MAT:MAKING_FUEL_DYE_HOST:DYE_MAUVE", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DYE_MAGENTA", "name": "make magenta dye", "category": "MAKE_DYE",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "DYER", "skill": "PROCESSPLANTS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "aniline", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "ANILINE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "aniline_container", "type": "ANY", "quantity": 1,
+          "contains": "aniline",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "acid", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "ACID",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "acid_container", "type": "ANY", "quantity": 1,
+          "contains": "acid",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "POWDER_MISC", "mat_token": "PLANT_MAT:MAKING_FUEL_DYE_HOST:DYE_MAGENTA", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DYE_INDIGO", "name": "make indigo dye", "category": "MAKE_DYE",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "DYER", "skill": "PROCESSPLANTS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "naphthalene", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "NAPHTHALENE"
+        },
+        {
+          "code": "alkali", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "ALKALI",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "alkali_container", "type": "ANY", "quantity": 1,
+          "contains": "alkali",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "POWDER_MISC", "mat_token": "PLANT_MAT:MAKING_FUEL_DYE_HOST:DYE_INDIGO", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DYE_ALIZARIN", "name": "make alizarin dye", "category": "MAKE_DYE",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "DYER", "skill": "PROCESSPLANTS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "anthracene", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "ANTHRACENE"
+        },
+        {
+          "code": "alkali", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "ALKALI",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "alkali_container", "type": "ANY", "quantity": 1,
+          "contains": "alkali",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "POWDER_MISC", "mat_token": "PLANT_MAT:MAKING_FUEL_DYE_HOST:DYE_ALIZARIN", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DYE_VIOLET", "name": "make violet dye", "category": "MAKE_DYE",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "DYER", "skill": "PROCESSPLANTS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "aniline", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "ANILINE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "aniline_container", "type": "ANY", "quantity": 1,
+          "contains": "aniline",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "methanol", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "METHANOL",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "methanol_container", "type": "ANY", "quantity": 1,
+          "contains": "methanol",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "bag", "type": "BAG", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "POWDER_MISC", "mat_token": "PLANT_MAT:MAKING_FUEL_DYE_HOST:DYE_VIOLET", "to_container": "bag", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "PULP_STRAW", "name": "make paper pulp from straw",
+      "building": "MILL", "skill": "PAPERMAKING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "straw", "type": "TOOL", "quantity": 1,
+          "reaction_class": "STRAW"
+        }
+      ],
+      "products": [
+        {
+          "type": "GLOB", "mat_id": "MAKING_FUEL_PAPER_STRAW", "count": 1, "dimension": 150, "paste": true
+        }
+      ]
+    },
+    {
+      "key": "PULP_SAWDUST", "name": "make paper pulp from sawdust",
+      "description": "The vessel is returned; only its contents are spent.",
+      "building": "MILL", "skill": "PAPERMAKING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "sawdust", "type": "TOOL", "tool_id": "MAKING_FUEL_SAWDUST", "quantity": 4
+        },
+        {
+          "code": "lye", "type": "LYE", "quantity": 150,
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "lye_container", "type": "ANY", "quantity": 1,
+          "contains": "lye",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "GLOB", "mat_id": "MAKING_FUEL_PAPER_WOOD", "count": 1, "dimension": 150, "paste": true
+        }
+      ]
+    },
+    {
+      "key": "PULP_BARK", "name": "make paper pulp from bark",
+      "description": "The vessel is returned; only its contents are spent.",
+      "building": "MILL", "skill": "PAPERMAKING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bark", "type": "TOOL", "tool_id": "MAKING_FUEL_BARK", "quantity": 4
+        },
+        {
+          "code": "lye", "type": "LYE", "quantity": 150,
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "lye_container", "type": "ANY", "quantity": 1,
+          "contains": "lye",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "GLOB", "mat_id": "MAKING_FUEL_PAPER_BARK", "count": 1, "dimension": 150, "paste": true
+        }
+      ]
+    },
+    {
+      "key": "VARNISH_WOOD", "name": "varnish a wooden item",
+      "description": "The item is preserved; it comes back treated. The vessel is returned; only its contents are spent.",
+      "building": "CRAFTSMAN", "skill": "WOODCRAFT", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "varnish", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "VARNISH",
+          "has_material_reaction_product": "SEAL_MAT",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "varnish",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "item", "type": "ANY", "quantity": 1,
+          "flags": {
+            "improvable": true, "wood": true, "preserve": true, "unimproved": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "IMPROVEMENT", "improvement_type": "COVERED", "target_reagent": "item",
+          "get_material_product": {
+            "reagent_code": "varnish", "product_code": "SEAL_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "DRY_DUNG", "name": "dry dung piles",
+      "description": "The sun does the same for free in a fortnight.",
+      "building": "KILN", "skill": "POTTERY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cake", "type": "TOOL", "tool_id": "MAKING_FUEL_DUNG", "mat_id": "MAKING_FUEL_DUNG", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_DUNG", "mat_id": "MAKING_FUEL_DUNG_DRIED", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DRY_STRAW", "name": "dry straw",
+      "description": "The sun does the same for free in a fortnight.",
+      "building": "KILN", "skill": "POTTERY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bale", "type": "TOOL", "tool_id": "MAKING_FUEL_STRAW", "mat_id": "MAKING_FUEL_STRAW", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_STRAW_DRIED", "mat_id": "MAKING_FUEL_STRAW_DRIED", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DRY_MASH", "name": "dry mash",
+      "description": "The sun does the same for free in a fortnight.",
+      "building": "KILN", "skill": "POTTERY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cake", "type": "TOOL", "tool_id": "MAKING_FUEL_MASH", "mat_id": "MAKING_FUEL_MASH", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_MASH", "mat_id": "MAKING_FUEL_MASH_DRIED", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DRY_PEAT", "name": "dry peat",
+      "description": "The sun does the same for free in a fortnight.",
+      "building": "KILN", "skill": "POTTERY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "peat", "type": "BOULDER", "mat_id": "PEAT", "quantity": 1
+        }
+      ],
+      "products": [
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_PEAT_DRIED", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "MAKE_VARNISH", "name": "make varnish from pitch and turpentine",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "DYER", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "pitch", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "PITCH"
+        },
+        {
+          "code": "turpentine", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "TURPENTINE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "turpentine_container", "type": "ANY", "quantity": 1,
+          "contains": "turpentine",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "out", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VARNISH", "to_container": "out", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "FILL_TANK", "name": "fill fuel tank",
+      "description": [
+        "Pours a vessel of liquid fuel into this furnace's tank, as much as the tank has room for. Whatever does not fit stays in the vessel, and a fill waiting at a full tank is cancelled.",
+        "Heavy fuel such as tar is taken first, and light fuel such as kerosene only when no heavy fuel is to hand. Each fuel is worth its energy: most fill about one job per unit, the alcohols about half of one."
+      ],
+      "building": "NONE", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "fuel", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "FUEL_LIQUID",
+          "flags": {
+            "in_container": true, "preserve": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "fuel",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "get_material_same": "fuel", "count": 0, "probability": 0, "dimension": 0
+        }
+      ]
+    },
+    {
+      "key": "MAKE_BURNER", "name": "assemble fuel burner",
+      "description": "A fuel tank, a mechanism for the valve and a pipe section for the fuel line, all of metal. Fits any furnace that burns fuel, except the wood furnace, the retort and the magma furnaces.",
+      "building": "MECHANIC", "skill": "MECHANICS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tank", "type": "TOOL", "tool_id": "MAKING_FUEL_TANK", "quantity": 1,
+          "flags": {
+            "metal": true, "non_artifact": true
+          }
+        },
+        {
+          "code": "valve", "type": "TRAPPARTS", "quantity": 1,
+          "flags": {
+            "metal": true, "non_artifact": true
+          }
+        },
+        {
+          "code": "pipe", "type": "PIPE_SECTION", "quantity": 1,
+          "flags": {
+            "metal": true, "non_artifact": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_BURNER", "count": 1, "get_material_same": "pipe"
+        }
+      ]
+    },
+    {
+      "key": "INSTALL_BURNER", "name": "install fuel burner",
+      "description": "Fits a fuel burner to this furnace as a permanent part, so it can run on liquid fuel from its own tank. Whatever is in the tank is lost if the furnace is deconstructed.",
+      "building": "NONE", "skill": "MECHANICS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "burner", "type": "TOOL", "tool_id": "MAKING_FUEL_BURNER", "quantity": 1,
+          "flags": {
+            "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_BURNER", "get_material_same": "burner", "count": 0, "probability": 0
+        }
+      ]
+    },
+    {
+      "key": "MAKE_ATOMISER", "name": "assemble fuel atomiser",
+      "description": "A pipe section coiled to run through the furnace's own heat, thinning heavy fuel until it flows, and a mechanism to spray it. Fitted beside a fuel burner, it lets that furnace burn heavy fuels such as tar.",
+      "building": "MECHANIC", "skill": "MECHANICS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "pipe", "type": "PIPE_SECTION", "quantity": 1,
+          "flags": {
+            "metal": true, "non_artifact": true
+          }
+        },
+        {
+          "code": "valve", "type": "TRAPPARTS", "quantity": 1,
+          "flags": {
+            "metal": true, "non_artifact": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_ATOMISER", "count": 1, "get_material_same": "pipe"
+        }
+      ]
+    },
+    {
+      "key": "INSTALL_ATOMISER", "name": "install fuel atomiser",
+      "description": "Fits a fuel atomiser to this furnace's burner as a permanent part, so it can burn heavy liquid fuels such as tar as well as light ones.",
+      "building": "NONE", "skill": "MECHANICS", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "atomiser", "type": "TOOL", "tool_id": "MAKING_FUEL_ATOMISER", "quantity": 1,
+          "flags": {
+            "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "TOOL", "subtype": "MAKING_FUEL_ATOMISER", "get_material_same": "atomiser", "count": 0, "probability": 0
+        }
+      ]
+    },
+    {
+      "key": "DISTIL_ETHANOL", "name": "distil ethanol from booze", "category": "MAKING_FUEL_CAT_DISTIL",
+      "description": [
+        "Distils a whole barrel of booze into one vessel of spirit, 95% ethanol, the most any still can give. The barrel comes back empty.",
+        "Booze is taken at wine strength, twelve parts in a hundred alcohol, so every eight units make about one of spirit. What does not make a whole unit carries over to the next barrel."
+      ],
+      "building": "STILL", "skill": "BREWING", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "booze", "type": "DRINK", "quantity": 150,
+          "flags": {
+            "in_container": true, "preserve": true
+          }
+        },
+        {
+          "code": "booze_container", "type": "ANY", "quantity": 1, "contains": "booze",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "out", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_ETHANOL", "to_container": "out", "count": 0, "probability": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "MIX_ASPHALT", "name": "mix asphalt",
+      "description": "Hot mix: a little bitumen binds a lot of gravel. The heat is what makes it mix, so it burns fuel.",
+      "building": "MASON", "skill": "MASONRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bitumen", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "BITUMEN",
+          "flags": {
+            "non_artifact": true
+          }
+        },
+        {
+          "code": "aggregate", "type": "TOOL", "reaction_class": "AGGREGATE", "quantity": 5,
+          "flags": {
+            "non_artifact": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BLOCKS", "mat_id": "MAKING_FUEL_ASPHALT", "count": 20
+        }
+      ]
+    }
+  ]
+}

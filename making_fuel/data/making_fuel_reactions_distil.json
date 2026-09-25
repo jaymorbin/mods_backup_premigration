@@ -1,0 +1,306 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_", "name": "Making Fuel", "version": "1.0"
+  },
+  "categories": [
+    {
+      "key": "DISTIL", "name": "Distil chemicals", "parent": ""
+    }
+  ],
+  "reactions": [
+    {
+      "key": "DISTIL_BENZENE", "name": "distil aniline from benzene", "category": "MAKING_FUEL_CAT_DISTIL",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "STILL", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "benzene", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "BENZENE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "benzene",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "acid", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "ACID",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container_2", "type": "ANY", "quantity": 1,
+          "contains": "acid",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "iron", "type": "BAR", "quantity": 150, "mat_id": "IRON"
+        },
+        {
+          "code": "vessel", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_ANILINE", "to_container": "vessel", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DISTIL_TAR", "name": "distil creosote and turpentine from tar", "category": "MAKING_FUEL_CAT_DISTIL",
+      "description": "Yield follows what goes in; liquid banks until a container fills. All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "STILL", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tar", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "TAR_ORGANIC",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "tar",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "tar_2", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "TAR_ORGANIC",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container_2", "type": "ANY", "quantity": 1,
+          "contains": "tar_2",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "out_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "out_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TURPENTINE", "to_container": "out_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_CREOSOTE", "to_container": "out_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "count": 0, "dimension": 150,
+          "get_material_product": {
+            "reagent_code": "tar", "product_code": "PITCH_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "DISTIL_METHANOL", "name": "distil methanol from wood vinegar", "category": "MAKING_FUEL_CAT_DISTIL",
+      "description": "All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "STILL", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "vinegar_1", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "VINEGAR",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "vinegar_container_1", "type": "ANY", "quantity": 1,
+          "contains": "vinegar_1",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "vinegar_2", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "VINEGAR",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "vinegar_container_2", "type": "ANY", "quantity": 1,
+          "contains": "vinegar_2",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "out", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_METHANOL", "to_container": "out", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "DISTIL_TAR_COAL", "name": "distil benzene and creosote from coal tar", "category": "MAKING_FUEL_CAT_DISTIL",
+      "description": "Yield follows what goes in; liquid banks until a container fills. All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "STILL", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tar", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "TAR_COAL",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container", "type": "ANY", "quantity": 1,
+          "contains": "tar",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "vessel", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_BENZENE", "to_container": "vessel", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_CREOSOTE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_NAPHTHALENE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_ANTHRACENE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "count": 0, "dimension": 150,
+          "get_material_product": {
+            "reagent_code": "tar", "product_code": "PITCH_MAT"
+          }
+        }
+      ]
+    },
+    {
+      "key": "DISTIL_OIL", "name": "distil kerosene, naphtha, and lubricant from crude oil", "category": "MAKING_FUEL_CAT_DISTIL",
+      "description": "Yield follows what goes in; liquid banks until a container fills. All vessels are returned: spent ones empty, borrowed ones filled.",
+      "building": "STILL", "skill": "CHEMISTRY", "fuel": true, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "crude", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "OIL_CRUDE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container_1", "type": "ANY", "quantity": 1,
+          "contains": "crude",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "crude_2", "type": "LIQUID_INORGANIC_ANY", "quantity": 150,
+          "reaction_class": "OIL_CRUDE",
+          "flags": {
+            "in_container": true
+          }
+        },
+        {
+          "code": "container_2", "type": "ANY", "quantity": 1,
+          "contains": "crude_2",
+          "flags": {
+            "preserve": true, "does_not_determine_product_amount": true
+          }
+        },
+        {
+          "code": "vessel", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_3", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_NAPHTHA", "to_container": "vessel", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_KEROSENE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_LUBRICANT", "to_container": "vessel_3", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "count": 0, "dimension": 150,
+          "get_material_product": {
+            "reagent_code": "crude", "product_code": "PITCH_MAT"
+          }
+        }
+      ]
+    }
+  ]
+}

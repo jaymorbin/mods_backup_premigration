@@ -1,0 +1,5122 @@
+{
+  "module": {
+    "prefix": "MAKING_FUEL_", "name": "Making Fuel", "version": "1.0"
+  },
+  "categories": [
+    {
+      "key": "RETORT", "name": "Distil", "parent": ""
+    },
+    {
+      "key": "RETORT_FURNITURE", "name": "Distil furniture", "parent": "RETORT"
+    },
+    {
+      "key": "RETORT_FINISHED_GOODS", "name": "Distil finished goods", "parent": "RETORT"
+    },
+    {
+      "key": "RETORT_CONTAINERS", "name": "Distil containers", "parent": "RETORT"
+    },
+    {
+      "key": "RETORT_ARMS", "name": "Distil arms and armour", "parent": "RETORT"
+    },
+    {
+      "key": "RETORT_DEAD", "name": "Distil the dead", "parent": "RETORT"
+    },
+    {
+      "key": "RETORT_PLANTS", "name": "Distil plants", "parent": "RETORT"
+    },
+    {
+      "key": "RETORT_FOODSTOCK", "name": "Distil foodstock", "parent": "RETORT"
+    },
+    {
+      "key": "RETORT_TEXTILES", "name": "Distil textiles", "parent": "RETORT"
+    }
+  ],
+  "reactions": [
+    {
+      "key": "RETORT_WOOD", "name": "distil tar from logs", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "wood", "type": "WOOD", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_KINDLING", "name": "distil tar from kindling", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "kindling", "type": "TOOL", "tool_id": "MAKING_FUEL_KINDLING", "quantity": 8
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TINDER", "name": "distil tar from tinder", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "tinder", "type": "TOOL", "tool_id": "MAKING_FUEL_TINDER", "quantity": 8
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BRANCHES", "name": "distil tar from branches", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "trap", "type": "TOOL", "tool_id": "MAKING_FUEL_BRANCH", "quantity": 4
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+        {
+      "key": "RETORT_SAWDUST", "name": "distil tar from sawdust", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "sawdust", "type": "TOOL", "tool_id": "MAKING_FUEL_SAWDUST", "quantity": 8
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BARK", "name": "distil tar from bark", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bark", "type": "TOOL", "tool_id": "MAKING_FUEL_BARK", "quantity": 8
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_STRAW", "name": "distil tar from straw", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "straw", "type": "TOOL", "tool_id": "MAKING_FUEL_STRAW", "quantity": 8
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PEAT_DRIED", "name": "distil tar from dried peat", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "peat", "type": "BOULDER", "mat_id": "MAKING_FUEL_PEAT_DRIED", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_3", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_3", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_STRAW_DRIED", "name": "distil tar from dried straw", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "straw", "type": "TOOL", "tool_id": "MAKING_FUEL_STRAW_DRIED", "quantity": 8
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PEAT", "name": "distil tar from peat", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Dried pays two to three times more. Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "peat", "type": "BOULDER", "mat_id": "PEAT", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_3", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_3", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_DUNG", "name": "distil tar from dung", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Dried pays two to three times more. Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "dung", "type": "TOOL", "tool_id": "MAKING_FUEL_DUNG", "mat_id": "MAKING_FUEL_DUNG", "quantity": 8
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BLOCKS", "name": "distil tar from blocks", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "blocks", "type": "BLOCKS_ANY", "quantity": 1,
+          "flags": {
+            "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_DUNG_DRIED", "name": "distil tar from dried dung", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "dung", "type": "TOOL", "tool_id": "MAKING_FUEL_DUNG", "mat_id": "MAKING_FUEL_DUNG_DRIED", "quantity": 6
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_MASH_DRIED", "name": "distil tar from dried mash", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "mash", "type": "TOOL", "tool_id": "MAKING_FUEL_MASH", "mat_id": "MAKING_FUEL_MASH_DRIED", "quantity": 6
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_MASH", "name": "distil tar from mash", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "mash", "type": "TOOL", "tool_id": "MAKING_FUEL_MASH", "quantity": 6
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_ROT", "name": "distil oil from rot", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "refuse", "type": "ANY", "quantity": 1, "reaction_class": "ROTTEN",
+          "flags": {
+            "allow_buryable": false, "nearby": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        { "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150 },
+        { "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0 },
+        { "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150 },
+        { "type": "BAR_ASH", "count": 0, "dimension": 150 },
+        { "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150 },
+        { "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150 }
+      ]
+    },
+    {
+      "key": "RETORT_LIGNITE", "name": "distil coal tar from lignite", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "coal", "type": "BOULDER", "quantity": 1, "mat_id": "LIGNITE"
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:GREEN_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BREEZE_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR_COAL", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:ASH_COAL", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BITUMINOUS", "name": "distil coal tar from bituminous coal", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "coal", "type": "BOULDER", "quantity": 1, "mat_id": "COAL_BITUMINOUS"
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:GREEN_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BREEZE_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR_COAL", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:ASH_COAL", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_LIGNITE_FLUXED", "name": "distil coal tar from lignite with flux", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled. Flux takes the sulphur out as gypsum and brimstone.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "coal", "type": "BOULDER", "quantity": 1, "mat_id": "LIGNITE"
+        },
+        {
+          "code": "flux", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "FLUX"
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:GREEN_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BREEZE_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR_COAL", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "GYPSUM", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "BRIMSTONE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:ASH_COAL", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BITUMINOUS_FLUXED", "name": "distil coal tar from bituminous coal with flux", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled. Flux takes the sulphur out as gypsum and brimstone.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "coal", "type": "BOULDER", "quantity": 1, "mat_id": "COAL_BITUMINOUS"
+        },
+        {
+          "code": "flux", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "FLUX"
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:GREEN_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BREEZE_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR_COAL", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "GYPSUM", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "BRIMSTONE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:ASH_COAL", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BRIMSTONE", "name": "distil acid from brimstone", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "brimstone", "type": "BOULDER", "quantity": 1, "mat_id": "BRIMSTONE"
+        },
+        {
+          "code": "vessel", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_SULFURIC_ACID", "to_container": "vessel", "count": 1, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_SHALE_OIL", "name": "distil crude oil from oil shale", "category": "MAKING_FUEL_CAT_RETORT",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "shale", "type": "BOULDER_ANY", "quantity": 1,
+          "reaction_class": "SHALE_OIL"
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:GREEN_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:BREEZE_COKE", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_CRUDE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:ASH_COAL", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_FURNITURE", "name": "distil tar from furniture", "category": "MAKING_FUEL_CAT_RETORT_FURNITURE",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Any wooden furnishing qualifies, containers only when empty, bins included. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "furniture", "type": "ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "furniture": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_GLOB", "name": "render tallow oil from fats", "category": "MAKING_FUEL_CAT_RETORT_FOODSTOCK",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "fat", "type": "GLOB", "quantity": 150,
+          "reaction_class": "FAT"
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_TALLOW", "to_container": "vessel_1", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT", "name": "distil tar from plants", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 1,
+          "flags": {
+            "plant": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CORPSE", "name": "render bone oil from corpses", "category": "MAKING_FUEL_CAT_RETORT_DEAD",
+      "description": "Yield follows the creature: size and build decide the take, and remainders bank. Borrowed vessels come back filled. Citizens and pets are never taken.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "corpse", "type": "CORPSE", "quantity": 1,
+          "flags": {
+            "allow_buryable": false
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CORPSEPIECE", "name": "render bone oil from body parts", "category": "MAKING_FUEL_CAT_RETORT_DEAD",
+      "description": "Yield follows the creature: size and build decide the take, and remainders bank. Borrowed vessels come back filled. Citizens and pets are never taken.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "corpse_pieces", "type": "CORPSEPIECE", "quantity": 1,
+          "flags": {
+            "allow_buryable": false, "bone": false
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BONE", "name": "render bone oil from bones", "category": "MAKING_FUEL_CAT_RETORT_DEAD",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bone", "type": "BODY_PART", "quantity": 1,
+          "flags": {
+            "allow_buryable": false, "body_part": true, "bone": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_MEAT", "name": "render bone oil from meat and organs", "category": "MAKING_FUEL_CAT_RETORT_FOODSTOCK",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "meat", "type": "MEAT", "quantity": 1,
+          "flags": {
+            "allow_buryable": false
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_LEATHER", "name": "render bone oil from leather", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hide", "type": "SKIN_TANNED", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_DRAIN", "name": "drain retort",
+      "building": "NONE", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "drain_key", "type": "TOOL", "reaction_class": "DRAIN", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_REMAINS", "name": "render bone oil from remains", "category": "MAKING_FUEL_CAT_RETORT_DEAD",
+      "description": "Yield follows the creature: size and build decide the take, and remainders bank. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "remains", "type": "REMAINS", "quantity": 6,
+          "flags": {
+            "allow_buryable": false
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_WEAPON", "name": "distil tar from weapons", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "weapon", "type": "WEAPON", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_AMMO", "name": "distil tar from ammunition", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "ammunition", "type": "AMMO", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_ARMOR", "name": "distil tar from armour", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "armour", "type": "ARMOR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HANDWEAR", "name": "distil tar from handwear", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "handwear", "type": "HANDWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HEADWEAR", "name": "distil tar from headwear", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "headwear", "type": "HEADWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_LEGWEAR", "name": "distil tar from legwear", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "legwear", "type": "LEGWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_QUIVER", "name": "distil tar from quivers", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "quiver", "type": "QUIVER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_SHIELD_ANY", "name": "distil tar from shields", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "shield", "type": "SHIELD_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_FOOTWEAR", "name": "distil tar from footwear", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "footwear", "type": "FOOTWEAR_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_INSTRUMENT", "name": "distil tar from instruments", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "instrument", "type": "INSTRUMENT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CRAFTS", "name": "distil tar from crafts", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "craft", "type": "CRAFT_ANY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_SKULL", "name": "render bone oil from skulls", "category": "MAKING_FUEL_CAT_RETORT_DEAD",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "skull", "type": "BODY_PART", "quantity": 10,
+          "flags": {
+            "allow_buryable": false, "body_part": true, "totemable": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_ANIMALTRAP", "name": "distil tar from animal traps", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "trap", "type": "ANIMALTRAP", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_ARMORSTAND", "name": "distil tar from armorstands", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "armorstand", "type": "ARMORSTAND", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BARREL", "name": "distil tar from barrels", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "barrel", "type": "BARREL", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BED", "name": "distil tar from beds", "category": "MAKING_FUEL_CAT_RETORT_FURNITURE",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bed", "type": "BED", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BIN", "name": "distil tar from bins", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bin", "type": "BIN", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BUCKET", "name": "distil tar from buckets", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bucket", "type": "BUCKET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CABINET", "name": "distil tar from cabinets", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cabinet", "type": "CABINET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CAGE", "name": "distil tar from cages", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cage", "type": "CAGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CHAIR", "name": "distil tar from chairs", "category": "MAKING_FUEL_CAT_RETORT_FURNITURE",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "chair", "type": "CHAIR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_COFFIN", "name": "distil tar from caskets", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "casket", "type": "COFFIN", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_BOX", "name": "distil tar from chests", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "chest", "type": "BOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_DOOR", "name": "distil tar from doors", "category": "MAKING_FUEL_CAT_RETORT_FURNITURE",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "door", "type": "DOOR", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_FLOODGATE", "name": "distil tar from floodgates", "category": "MAKING_FUEL_CAT_RETORT_FURNITURE",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "floodgate", "type": "FLOODGATE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_GOBLET", "name": "distil tar from cups", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cup", "type": "GOBLET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_GRATE", "name": "distil tar from grates", "category": "MAKING_FUEL_CAT_RETORT_FURNITURE",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "grate", "type": "GRATE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HATCH", "name": "distil tar from hatches", "category": "MAKING_FUEL_CAT_RETORT_FURNITURE",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hatch", "type": "HATCH_COVER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_JUG", "name": "distil tar from jugs", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "jug", "type": "JUG", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_LIQUID_CONTAINER", "name": "distil tar from liquid containers", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "liquid_container", "type": "HAS_LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_FOOD_STORAGE", "name": "distil tar from food containers", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "food_container", "type": "HAS_FOOD_STORAGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_HIVE", "name": "distil tar from hives", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "hive", "type": "HAS_HIVE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_NEST_BOX", "name": "distil tar from nest boxes", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "nest_box", "type": "HAS_NEST_BOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TABLE", "name": "distil tar from tables", "category": "MAKING_FUEL_CAT_RETORT_FURNITURE",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "table", "type": "TABLE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_TRACK_CART", "name": "distil tar from minecarts", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "minecart", "type": "HAS_TRACK_CART", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_HEAVY_OBJECT_HAULING", "name": "distil tar from wheelbarrows", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "wheelbarrow", "type": "HAS_HEAVY_OBJECT_HAULING", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_STAND_AND_WORK_ABOVE", "name": "distil tar from stepladders", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "stepladder", "type": "HAS_STAND_AND_WORK_ABOVE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_ROLL_UP_SHEET", "name": "distil tar from scroll rollers", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "scroll_roller", "type": "HAS_ROLL_UP_SHEET", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_PROTECT_FOLDED_SHEETS", "name": "distil tar from book bindings", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "book_binding", "type": "HAS_PROTECT_FOLDED_SHEETS", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_BOOKCASE", "name": "distil tar from bookcases", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "bookcase", "type": "HAS_BOOKCASE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_DISPLAY_OBJECT", "name": "distil tar from pedestals and display cases", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Only empty ones are taken; anything holding cargo is left where it stands. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "display", "type": "HAS_DISPLAY_OBJECT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true, "empty": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_GAMES_OF_CHANCE", "name": "distil tar from dice", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "die", "type": "HAS_GAMES_OF_CHANCE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_HAS_DIVINATION", "name": "distil tar from divination dice", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "divination_die", "type": "HAS_DIVINATION", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_WEAPONRACK", "name": "distil tar from weaponracks", "category": "MAKING_FUEL_CAT_RETORT_CONTAINERS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "weaponrack", "type": "WEAPONRACK", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_ENORMOUSCORKSCREW", "name": "distil tar from enormous corkscrews", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "corkscrew", "type": "ENORMOUSCORKSCREW", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_SPIKEDBALL", "name": "distil tar from spiked balls", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "spiked_ball", "type": "SPIKEDBALL", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_MENACINGSPIKE", "name": "distil tar from menacing spikes", "category": "MAKING_FUEL_CAT_RETORT_ARMS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "menacing_spikes", "type": "MENACINGSPIKE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TOY", "name": "distil tar from toys", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy", "type": "TOY", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TOY_PUZZLEBOX", "name": "distil tar from puzzleboxes", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "puzzlebox", "type": "TOY_PUZZLEBOX", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TOY_BOAT", "name": "distil tar from toy boats", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_boat", "type": "TOY_BOAT", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TOY_HAMMER", "name": "distil tar from toy hammers", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_hammer", "type": "TOY_HAMMER", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TOY_AXE", "name": "distil tar from toy axes", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "toy_axe", "type": "TOY_AXE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TOY_MINIFORGE", "name": "distil tar from toy mini-forges", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "miniforge", "type": "TOY_MINIFORGE", "quantity": 1,
+          "flags": {
+            "non_artifact": true, "wood": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_WOOD", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_TOTEM", "name": "render bone oil from totems", "category": "MAKING_FUEL_CAT_RETORT_FINISHED_GOODS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "totem", "type": "TOTEM", "quantity": 3,
+          "flags": {
+            "non_artifact": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_RAW_FISH", "name": "render bone oil from raw fish", "category": "MAKING_FUEL_CAT_RETORT_FOODSTOCK",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "raw_fish", "type": "FISH_RAW", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_FISH", "name": "render bone oil from prepared fish", "category": "MAKING_FUEL_CAT_RETORT_FOODSTOCK",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "fish", "type": "FISH", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CHEESE", "name": "render bone oil from cheese", "category": "MAKING_FUEL_CAT_RETORT_FOODSTOCK",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cheese", "type": "CHEESE", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_FOOD", "name": "render bone oil from foods", "category": "MAKING_FUEL_CAT_RETORT_FOODSTOCK",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "food", "type": "FOOD", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_EGG", "name": "render bone oil from eggs", "category": "MAKING_FUEL_CAT_RETORT_FOODSTOCK",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "egg", "type": "EGG", "quantity": 1
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT_MILLABLE", "name": "distil tar from millable plants", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 1,
+          "flags": {
+            "plant": true, "millable": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT_PROCESSABLE", "name": "distil tar from processable plants", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 1,
+          "flags": {
+            "plant": true, "processable": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT_COOKABLE", "name": "distil tar from cookable plants", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 1,
+          "flags": {
+            "plant": true, "cookable": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT_SEEDING", "name": "distil tar from seeding plants", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 1,
+          "has_material_reaction_product": "SEED_MAT",
+          "flags": {
+            "plant": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT_BREWING", "name": "distil tar from fermentable plants", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 1,
+          "has_material_reaction_product": "DRINK_MAT",
+          "flags": {
+            "plant": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT_PRESSING_OIL", "name": "distil tar from oil-bearing plants", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 1,
+          "has_material_reaction_product": "PRESS_LIQUID_MAT",
+          "flags": {
+            "plant": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT_PRESSING_PAPER", "name": "distil tar from paper-slurryable plants", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "plants", "type": "PLANT", "quantity": 1,
+          "has_material_reaction_product": "PRESS_PAPER_MAT",
+          "flags": {
+            "plant": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_SEEDS", "name": "distil tar from seedstock", "category": "MAKING_FUEL_CAT_RETORT_PLANTS",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "seeds", "type": "SEEDS", "quantity": 10
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_PLANT_GROWTH", "name": "distil tar from leaves and fruit", "category": "MAKING_FUEL_CAT_RETORT_FOODSTOCK",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "growth", "type": "PLANT_GROWTH", "quantity": 10,
+          "flags": {
+            
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CLOTH_PLANT", "name": "distil tar from plant cloth", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 10000,
+          "flags": {
+            "non_artifact": true, "plant": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CLOTH_YARN", "name": "render ammonia from yarn cloth", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 10000,
+          "flags": {
+            "non_artifact": true, "yarn": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CLOTH_HAIR", "name": "render ammonia from hair cloth", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 10000,
+          "flags": {
+            "non_artifact": true, "hair_wool": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_CLOTH_SILK", "name": "render ammonia from silk cloth", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "cloth", "type": "CLOTH", "quantity": 10000,
+          "flags": {
+            "non_artifact": true, "silk": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_THREAD_PLANT", "name": "distil tar from plant thread", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 15000,
+          "flags": {
+            "plant": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_TAR", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_VINEGAR_PLANT", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_THREAD_YARN", "name": "render ammonia from yarn", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 15000,
+          "flags": {
+            "yarn": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_THREAD_HAIR", "name": "render ammonia from hair thread", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 15000,
+          "flags": {
+            "hair_wool": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    },
+    {
+      "key": "RETORT_THREAD_SILK", "name": "render ammonia from silk thread", "category": "MAKING_FUEL_CAT_RETORT_TEXTILES",
+      "description": "Yield follows what goes in; liquid banks until a container fills. Borrowed vessels come back filled.",
+      "building": "RETORT", "skill": "CHEMISTRY", "fuel": false, "fallback_template": null,
+      "permissions": {
+        "mode": "AUTO"
+      },
+      "reagents": [
+        {
+          "code": "thread", "type": "THREAD", "quantity": 15000,
+          "flags": {
+            "silk": true
+          }
+        },
+        {
+          "code": "vessel_1", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        },
+        {
+          "code": "vessel_2", "type": "TOOL", "has_tool_use": "LIQUID_CONTAINER", "quantity": 1,
+          "flags": {
+            "empty": true, "preserve": true
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CHARCOAL", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BOULDER", "mat_id": "MAKING_FUEL_CHAR", "count": 0
+        },
+        {
+          "type": "BAR", "mat_token": "PLANT_MAT:MAKING_FUEL_COAL_HOST:CINDER", "count": 0, "dimension": 150
+        },
+        {
+          "type": "BAR_ASH", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_AMMONIA", "to_container": "vessel_1", "count": 0, "dimension": 150
+        },
+        {
+          "type": "LIQUID_MISC_INORGANIC", "mat_id": "MAKING_FUEL_OIL_BONE", "to_container": "vessel_2", "count": 0, "dimension": 150
+        }
+      ]
+    }
+  ]
+}

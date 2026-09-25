@@ -1,0 +1,43 @@
+{
+    "module": {
+        "prefix": "MAKING_FUEL_",
+        "name": "Making Fuel"
+    },
+    "buildings": [
+        {
+            "key": "RETORT",
+            "class": "FURNACE",
+            "name": "Retort",
+            "name_color": [0, 7, 1],
+            "dim": [3, 3],
+            "workloc": [1, 1],
+            "build_stages": 3,
+            "build_key": "CUSTOM_SHIFT_R",
+            "needs_magma": false,
+            "block": [
+                [0, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0]
+            ],
+            "build_labors": ["MASON"],
+            "labor_description": "Masonry",
+            "tooltip": [
+                "Distill tar, oils and ",
+                "spirits under sealed ",
+                "heat. Runs on its own ",
+                "products rather than ",
+                "furnace fuel."
+            ],
+            "build_items": [
+                { "type": "BLOCKS", "quantity": 1, "flags2": { "fire_safe": true, "allow_artifact": true } },
+                { "type": "TOOL", "subtype": "ITEM_TOOL_LARGE_POT", "quantity": 2, "flags1": { "empty": true }, "flags2": { "allow_artifact": true } },
+                { "type": "BARREL", "quantity": 1, "flags1": { "empty": true }, "flags2": { "allow_artifact": true } }
+            ],
+            "graphics": {
+                "image": "images/retort.png",
+                "tile_dim": 32,
+                "icon_image": "images/retort_icon.png"
+            }
+        }
+    ]
+}
